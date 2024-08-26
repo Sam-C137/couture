@@ -5,6 +5,11 @@
 	console.log(data);
 </script>
 
+<svelte:head>
+	<title>Home | Couture</title>
+	<meta name="description" content="Home of the exotic" />
+</svelte:head>
+
 <div>Some content</div>
 
 <style lang="scss">

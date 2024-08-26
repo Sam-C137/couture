@@ -3,8 +3,12 @@
 
 @layer base {
     :root {
-        --white: #ffffff;
+        /* font */
+        --font-logo: 'Yatra One';
+        --font-title: Georgia;
+        --font-body: 'Euclid Circular A';
 
+        --white: #ffffff;
         --dark: #000000;
 
         /* yellow */
