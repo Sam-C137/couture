@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/server/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/server/prisma.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/stores/user.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/style/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/style/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/style/_partials.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/style/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/style/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/+page.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(protected)/+layout.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/api/auth/logout/+server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Bold Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Light Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Medium Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A SemiBold Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/Euclid Circular A.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="+layout" />
+        <option value="CSS File" />
+        <option value="+page" />
+        <option value="SCSS File" />
+        <option value="Navbar" />
+        <option value="Avatar" />
+        <option value="+page.server" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2l4525aksNJGJlLcxpmOlz19kNx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SamAckah/Desktop/Program Files/couture&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\font" />
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\routes\(protected)" />
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\routes\(auth)\login" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19072.23" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="" />
+      <created>1724426298854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724426298854</updated>
+      <workItem from="1724426300019" duration="16531000" />
+      <workItem from="1724684960291" duration="230000" />
+      <workItem from="1724685304202" duration="5060000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

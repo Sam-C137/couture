@@ -1,0 +1,57 @@
+@import "@fontsource/yatra-one";
+@import "reset.css";
+
+@layer base {
+    :root {
+        --white: #ffffff;
+
+        --dark: #000000;
+
+        /* yellow */
+        --yellow-50: #fffee7;
+        --yellow-100: #fffcc1;
+        --yellow-200: #fff686;
+        --yellow-300: #ffe941;
+        --yellow-400: #ffd70d;
+        --yellow-500: #edb900;
+        --yellow-600: #d19100;
+        --yellow-700: #a66702;
+        --yellow-800: #89500a;
+        --yellow-900: #74410f;
+        --yellow-950: #442204;
+
+        /* neutral */
+        --neutral-50: #f6f6f6;
+        --neutral-100: #f6f6f6;
+        --neutral-200: #d1d1d1;
+        --neutral-300: #b0b0b0;
+        --neutral-400: #888888;
+        --neutral-500: #6d6d6d;
+        --neutral-600: #5d5d5d;
+        --neutral-700: #4f4f4f;
+        --neutral-800: #454545;
+        --neutral-900: #454545;
+        --neutral-950: #222222;
+
+        /* blue */
+        --blue-50: #ecf2ff;
+        --blue-100: #dde7ff;
+        --blue-200: #c2d3ff;
+        --blue-300: #9cb5ff;
+        --blue-400: #758cff;
+        --blue-500: #5363ff;
+        --blue-600: #3639f5;
+        --blue-700: #2a2ad8;
+        --blue-800: #2527ae;
+        --blue-900: #262a89;
+        --blue-950: #161650;
+    }
+
+    [data-theme="dark"] {
+
+    }
+}
+
+html {
+    color-scheme: light dark;
+}
