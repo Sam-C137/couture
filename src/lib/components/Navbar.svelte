@@ -1,9 +1,25 @@
 <script lang="ts">
 	import Avatar from '$lib/components/ui/Avatar.svelte';
 	import { user } from '$lib/stores/user.store';
-	import { page } from '$app/stores';
+	import { page, navigating } from '$app/stores';
+	import NProgress from 'nprogress';
+	import 'nprogress/nprogress.css';
+
+	NProgress.configure({
+		minimum: 0.16
+	});
 
 	$: path = $page.url.pathname;
+
+	$: {
+		if ($navigating) {
+			NProgress.start();
+		}
+
+		if (!$navigating) {
+			NProgress.done();
+		}
+	}
 </script>
 
 <nav>

@@ -5,11 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/casandra-jean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/donatella-versace.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/luis-vargas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/miguel-angel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/sofia-herera.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/EditorPicks.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/HottestDesigners.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/TodayArticles.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/style/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/style/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/style/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_breakpoints.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/style/_partials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_partials.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
     </list>
@@ -29,6 +45,9 @@
         <option value="Avatar" />
         <option value="+page.server" />
         <option value="TypeScript File" />
+        <option value="EditorPicks" />
+        <option value="TodayArticles" />
+        <option value="HottestDesigners" />
       </list>
     </option>
   </component>
@@ -49,29 +68,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SamAckah/Desktop/Program Files/couture&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/SamAckah/Desktop/Program Files/couture/src/lib/images/caroussel",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\images\caroussel" />
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\images" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\font" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\fonts" />
     </key>
@@ -100,7 +121,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19072.23" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.426" />
       </set>
     </attachedChunks>
   </component>
@@ -114,7 +135,9 @@
       <updated>1724426298854</updated>
       <workItem from="1724426300019" duration="16531000" />
       <workItem from="1724684960291" duration="230000" />
-      <workItem from="1724685304202" duration="11070000" />
+      <workItem from="1724685304202" duration="29422000" />
+      <workItem from="1724774035197" duration="3242000" />
+      <workItem from="1724789574890" duration="3528000" />
     </task>
     <servers />
   </component>

@@ -17,11 +17,11 @@
 	@use '$lib/style/main' as *;
 
 	button {
-		--size: 2rem;
+		$size: var(--avatar-size, 2rem);
 
 		@extend %reset;
-		width: var(--size);
-		height: var(--size);
+		width: $size;
+		height: $size;
 	}
 
 	img {
