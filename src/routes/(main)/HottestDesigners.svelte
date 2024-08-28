@@ -48,7 +48,6 @@
 
 	section {
 		padding-block: 6rem;
-		background: $white;
 
 		h3 {
 			margin-bottom: 1rem;
@@ -67,9 +66,10 @@
 			margin-top: 2.5rem;
 			@extend %flex-row;
 			flex-wrap: wrap;
-			justify-content: space-between;
-			gap: 1rem;
+			gap: clamp(1rem, 2vw + 1rem, 1.5rem);
 			transform-style: preserve-3d;
+		  	width: fit-content;
+		    margin-inline: auto;
 
 			li {
 				transition: 0.3s cubic-bezier(0, 0.11, 0.66, 0.8);

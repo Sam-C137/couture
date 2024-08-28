@@ -83,15 +83,11 @@
 
 	section {
 		background: $yellow-500;
-		color: $neutral-950;
 		text-align: left;
 
 		h2,
 		p {
-			max-width: 100%;
-			@include lg {
-				max-width: 60%;
-			}
+		  max-width: 70ch;
 		}
 
 		h2 {

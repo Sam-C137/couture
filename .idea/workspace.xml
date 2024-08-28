@@ -5,29 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/caroussel/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/casandra-jean.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/donatella-versace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/luis-vargas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/miguel-angel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/images/sofia-herera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(main)/EditorPicks.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(main)/HottestDesigners.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(main)/TodayArticles.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/evening-glamour.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/summer-elegance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/timeless-classics.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/style/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_breakpoints.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/style/_partials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_partials.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/style/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/EditorPicks.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/EditorPicks.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/HottestDesigners.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/HottestDesigners.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +37,9 @@
         <option value="EditorPicks" />
         <option value="TodayArticles" />
         <option value="HottestDesigners" />
+        <option value="FeaturedCollections" />
       </list>
     </option>
-  </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/SamAckah/Desktop/Program Files/couture/src/lib/images/caroussel",
+    "last_opened_file_path": "C:/Users/SamAckah/Desktop/Program Files/couture/src/lib/images",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -91,8 +78,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\images\caroussel" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\images" />
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\images\caroussel" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\font" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\fonts" />
     </key>
@@ -137,7 +124,7 @@
       <workItem from="1724684960291" duration="230000" />
       <workItem from="1724685304202" duration="29422000" />
       <workItem from="1724774035197" duration="3242000" />
-      <workItem from="1724789574890" duration="3528000" />
+      <workItem from="1724789574890" duration="15722000" />
     </task>
     <servers />
   </component>
