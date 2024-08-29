@@ -1,5 +1,6 @@
 <script lang="ts">
 	import RatingStars from '$lib/components/ui/RatingStars.svelte';
+	import { onMount } from 'svelte';
 
 	export let src: string;
 	export let ratingValue: number;
@@ -7,18 +8,36 @@
 	export let description: string;
 
 	let videoElement: HTMLVideoElement | undefined;
+	let canplay = false;
 
 	function handleMouseOver() {
-		videoElement?.play();
+		if (!videoElement) return;
+
+		if (videoElement.readyState >= 2 && canplay) {
+			videoElement.play();
+		}
 	}
 
 	function handleMouseOut() {
 		videoElement?.pause();
 	}
+
+	onMount(async () => {
+		try {
+			await videoElement?.play();
+			canplay = true;
+			videoElement?.pause();
+		} catch {
+			canplay = false;
+		}
+	});
 </script>
 
 <article>
 	<video
+		muted
+		playsinline
+		preload="metadata"
 		on:mouseover={handleMouseOver}
 		on:focus={handleMouseOver}
 		on:mouseout={handleMouseOut}

@@ -1,11 +1,4 @@
 <script lang="ts">
-	import marieWinter from '$lib/videos/marie-winter.mp4';
-	import markChimney from '$lib/videos/mark-chimney.mp4';
-	import prissyChapman from '$lib/videos/prissy-chapman.mp4';
-	import huengWei from '$lib/videos/hueng-wei.mp4';
-	import oliviaRodrigo from '$lib/videos/olivia-rodrigo.mp4';
-	import lisaMarie from '$lib/videos/lisa-marie.mp4';
-	import gwenStacy from '$lib/videos/gwen-stacy.mp4';
 	import VideoPlayerCard from '$lib/components/VideoPlayerCard.svelte';
 	import { onMount } from 'svelte';
 	import { isHtmlElement, screenSize } from '$lib/helpers';
@@ -16,49 +9,49 @@
 			comment:
 				'"I absolutely love my new winter coat from Couture! The quality is outstanding, and it fits perfectly. I’ve received so many compliments already. The customer service team was also incredibly helpful when I had questions about sizing. Highly recommend!"',
 			rating: 5,
-			video: marieWinter
+			video: 'https://utfs.io/f/00300987-9bcb-4818-a0a6-31ad5dad5ae2-rl3v20.mp4'
 		},
 		{
 			name: 'Mark Chimney',
 			comment:
 				'"The suits I ordered exceeded my expectations in both comfort and style. Shipping was a bit slower than anticipated, but the product was worth the wait. I’ll definitely be shopping here again for more trendy pieces."',
 			rating: 4,
-			video: markChimney
+			video: 'https://utfs.io/f/ed6def06-cc88-4761-a07b-8a65786555ab-8eztjb.mp4'
 		},
 		{
 			name: 'Prissy Chapman',
 			comment:
 				'"Finding my wedding dress and my bridesmaids’ dresses at [Your Brand Name] was an absolute delight. The bridal gown was elegant and perfectly fitted, while my bridesmaids were thrilled with their dresses. The experience was as memorable as the day itself. Highly recommended!"',
 			rating: 5,
-			video: prissyChapman
+			video: 'https://utfs.io/f/f2de72ba-3a07-44b6-8606-98390bb68caf-mqiqiz.mp4'
 		},
 		{
 			name: 'Hueng Wei',
 			comment:
 				'"The suits I ordered exceeded my expectations in both comfort and style. Shipping was a bit slower than anticipated, but the product was worth the wait. I’ll definitely be shopping here again for more trendy pieces."',
 			rating: 5,
-			video: huengWei
+			video: 'https://utfs.io/f/29cecc63-350d-4694-a8d7-bf3e371f6173-nv4ytb.mp4'
 		},
 		{
 			name: 'Olivia Rodrigo',
 			comment:
 				'"The suits I ordered exceeded my expectations in both comfort and style. Shipping was a bit slower than anticipated, but the product was worth the wait. I’ll definitely be shopping here again for more trendy pieces."',
 			rating: 4,
-			video: oliviaRodrigo
+			video: 'https://utfs.io/f/394e3da9-ab3c-4b4c-b78d-eb3dcfe369af-l37fwb.mp4'
 		},
 		{
 			name: 'Lisa Marie',
 			comment:
 				'"The suits I ordered exceeded my expectations in both comfort and style. Shipping was a bit slower than anticipated, but the product was worth the wait. I’ll definitely be shopping here again for more trendy pieces."',
 			rating: 5,
-			video: lisaMarie
+			video: 'https://utfs.io/f/48b6682f-8603-41cb-9b3b-21d4e62aef53-6tmoy0.mp4'
 		},
 		{
 			name: 'Gwen Stacy',
 			comment:
 				'Discovering my wedding dress and my bridesmaids’ outfits at [Your Brand Name] was an absolute joy. The bridal gown was stunning and fit like a dream, while my bridesmaids loved their dresses. The experience was as unforgettable as the big day itself. Highly recommended!',
 			rating: 5,
-			video: gwenStacy
+			video: 'https://utfs.io/f/3b24949a-babf-4759-901d-f5349cc76222-hluxcy.mp4'
 		}
 	];
 

@@ -1,29 +1,38 @@
 <script lang="ts">
 	import casandra from '$lib/images/casandra-jean.png';
+	import casandraSmall from '$lib/images/casandra-jean-small.png';
 	import luis from '$lib/images/luis-vargas.png';
+	import luisSmall from '$lib/images/luis-vargas-small.png';
 	import miguel from '$lib/images/miguel-angel.png';
+	import miguelSmall from '$lib/images/miguel-angel-small.png';
 	import sofia from '$lib/images/sofia-herera.png';
+	import sofiaSmall from '$lib/images/sofia-herera-small.png';
+	import OptimizedImage from '$lib/components/ui/OptimizedImage.svelte';
 
 	let designers = [
 		{
 			name: 'Casandra Jean',
 			topic: 'Fabrics & Jewellery',
-			image: casandra
+			image: casandra,
+			small: casandraSmall
 		},
 		{
 			name: 'Luis Vargas',
 			topic: 'Footwear & Accessories',
-			image: luis
+			image: luis,
+			small: luisSmall
 		},
 		{
 			name: 'Miguel Ángel',
 			topic: 'Haute Couture',
-			image: miguel
+			image: miguel,
+			small: miguelSmall
 		},
 		{
 			name: 'Sofía Herrera',
 			topic: 'Ready-to-Wear',
-			image: sofia
+			image: sofia,
+			small: sofiaSmall
 		}
 	];
 </script>
@@ -35,7 +44,11 @@
 	<ul>
 		{#each designers as designer (designer.name)}
 			<li>
-				<img src={designer.image} alt={designer.name} />
+				<OptimizedImage
+					src={designer.image}
+					fallback={designer.small}
+					alt={designer.name}
+				/>
 				<p>{designer.name}</p>
 				<b>{designer.topic}</b>
 			</li>
@@ -57,9 +70,12 @@
 			@extend %text-body;
 		}
 
-		img {
+		:global(img),
+		:global(.blur-load) {
 			aspect-ratio: 245 / 275;
 			cursor: pointer;
+			width: 245px;
+			height: 275px;
 		}
 
 		ul {
@@ -68,8 +84,8 @@
 			flex-wrap: wrap;
 			gap: clamp(1rem, 2vw + 1rem, 1.5rem);
 			transform-style: preserve-3d;
-		  	width: fit-content;
-		    margin-inline: auto;
+			width: fit-content;
+			margin-inline: auto;
 
 			li {
 				transition: 0.3s cubic-bezier(0, 0.11, 0.66, 0.8);

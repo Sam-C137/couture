@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/components/VideoPlayerCard.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/OptimizedImage.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/RatingStars.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/videos/gwen-stacy.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/videos/hueng-wei.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/videos/lisa-marie.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/videos/marie-winter.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/videos/mark-chimney.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/videos/olivia-rodrigo.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/videos/prissy-chapman.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(main)/VideoGallery.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/VideoPlayerCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/VideoPlayerCard.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/OptimizedImage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/OptimizedImage.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/style/_partials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_partials.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/videos/gwen-stacy.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/videos/hueng-wei.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/videos/lisa-marie.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/videos/marie-winter.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/videos/mark-chimney.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/videos/olivia-rodrigo.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/videos/prissy-chapman.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/VideoGallery.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/VideoGallery.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +133,7 @@
       <workItem from="1724684960291" duration="230000" />
       <workItem from="1724685304202" duration="29422000" />
       <workItem from="1724774035197" duration="3242000" />
-      <workItem from="1724789574890" duration="33421000" />
+      <workItem from="1724789574890" duration="36763000" />
     </task>
     <servers />
   </component>

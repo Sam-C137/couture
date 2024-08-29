@@ -1,7 +1,11 @@
 <script lang="ts">
 	import summerElegance from '$lib/images/summer-elegance.png';
+	import summerEleganceSmall from '$lib/images/summer-elegance-small.png';
 	import timelessClassics from '$lib/images/timeless-classics.png';
+	import timelessClassicsSmall from '$lib/images/timeless-classics-small.png';
 	import eveningGlamour from '$lib/images/evening-glamour.png';
+	import eveningGlamourSmall from '$lib/images/evening-glamour-small.png';
+	import OptimizedImage from '$lib/components/ui/OptimizedImage.svelte';
 </script>
 
 <section>
@@ -23,11 +27,15 @@
 				</p>
 				<a href="/">View Collection</a>
 			</div>
-			<img src={summerElegance} alt="summer elegance" />
+			<OptimizedImage
+				src={summerElegance}
+				fallback={summerEleganceSmall}
+				alt="summer elegance"
+			/>
 		</div>
 		<hr />
 		<div class="collection">
-			<div class="text-content mid">
+			<div class="text-content">
 				<h4>CLASSICS</h4>
 				<h5>TIMELESS CLASSICS</h5>
 				<p>
@@ -37,7 +45,11 @@
 				</p>
 				<a href="/">View Collection</a>
 			</div>
-			<img src={timelessClassics} class="mid" alt="timeless classics" />
+			<OptimizedImage
+				src={timelessClassics}
+				fallback={timelessClassicsSmall}
+				alt="timeless classics"
+			/>
 		</div>
 		<hr />
 		<div class="collection">
@@ -50,7 +62,11 @@
 				</p>
 				<a href="/">View Collection</a>
 			</div>
-			<img src={eveningGlamour} alt="evening glamour" />
+			<OptimizedImage
+				src={eveningGlamour}
+				fallback={eveningGlamourSmall}
+				alt="evening glamour"
+			/>
 		</div>
 	</div>
 </section>
@@ -87,19 +103,24 @@
 				grid-template-columns: repeat(12, 1fr);
 				grid-template-rows: repeat(9, 1fr);
 
-				img {
+				:global(img),
+				:global(.blur-load) {
 					height: 100%;
 					width: 100%;
 					object-fit: cover;
 					aspect-ratio: 826/633;
 					grid-row: 1 / 10;
+					grid-column: 9 / 13;
+				}
 
-					&.mid {
+				&:not(:first-of-type, :last-of-type) {
+					:global(img),
+					:global(.blur-load) {
 						grid-column: 1 / 5;
 					}
 
-					&:not(.mid) {
-						grid-column: 9 / 13;
+					.text-content {
+						grid-column: 4 / 13;
 					}
 				}
 
@@ -110,14 +131,7 @@
 					padding: 2.5rem;
 					z-index: 1;
 					grid-row: 2 / 9;
-
-					&.mid {
-						grid-column: 4 / 13;
-					}
-
-					&:not(.mid) {
-						grid-column: 1 / 10;
-					}
+					grid-column: 1 / 10;
 
 					h4 {
 						@extend %text-body;

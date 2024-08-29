@@ -19,7 +19,7 @@
 	}
 </script>
 
-<div class:loaded class="blur-load" style:background-image={loaded ? `url(${fallback})` : null}>
+<div class:loaded class="blur-load" style:background-image={!loaded ? `url(${fallback})` : null}>
 	<img {src} {alt} bind:this={img} loading="lazy" on:load={() => handleLoad()} />
 </div>
 

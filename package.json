@@ -37,6 +37,7 @@
 		"@iconify/svelte": "^4.0.2",
 		"@lucia-auth/adapter-prisma": "^4.0.1",
 		"@prisma/client": "^5.18.0",
+		"@uploadthing/svelte": "^6.6.3",
 		"arctic": "^1.9.2",
 		"iconify-icon": "^2.1.0",
 		"ky": "^1.7.1",
