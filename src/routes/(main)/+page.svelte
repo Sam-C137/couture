@@ -4,6 +4,7 @@
 	import TodayArticles from './TodayArticles.svelte';
 	import HottestDesigners from './HottestDesigners.svelte';
 	import FeaturedCollections from './FeaturedCollections.svelte';
+	import VideoGallery from './VideoGallery.svelte';
 
 	export let data: PageData;
 	console.log(data);
@@ -22,11 +23,13 @@
 
 <FeaturedCollections />
 
+<VideoGallery />
+
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
 	:global(section) {
-      	min-height: fit-content;
+		min-height: fit-content;
 		padding-inline: 5vw;
 		font-family: $font-body;
 		padding-top: 2rem;

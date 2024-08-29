@@ -25,6 +25,13 @@
     background: none;
 }
 
+%hide-scrollbar {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+}
+
 %text-heading {
     font-size: clamp(1.25rem, 2vw + 1rem, 2rem);
     font-family: var(--font-title);
