@@ -6,6 +6,7 @@
 	import { superForm } from 'sveltekit-superforms';
 	import { zod } from 'sveltekit-superforms/adapters';
 	import { loginSchema } from '$lib/utils/validations';
+	import PasswordInput from '$lib/components/ui/PasswordInput.svelte';
 
 	export let data: PageData;
 
@@ -32,13 +33,12 @@
 		bind:value={$form.email}
 		error={$errors.email?.at(0)}
 	/>
-	<Input
+	<PasswordInput
 		id="password"
 		name="password"
 		floatLabel
 		required
 		label="Password"
-		type="password"
 		bind:value={$form.password}
 		error={$errors.password?.at(0)}
 	/>

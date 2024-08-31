@@ -12,8 +12,6 @@
 	export let type: 'text' | 'number' | 'tel' | 'email' | 'password' = 'text';
 	export let error: string | undefined = undefined;
 
-	let showPassword = false;
-
 	$: inputProps = {
 		id,
 		name,
@@ -25,12 +23,6 @@
 	};
 
 	$: useParseNumber = type === 'number' || type === 'tel' ? parseNumber : () => {};
-
-	function togglePassword() {
-		if (!selfPasswordInput) return;
-		showPassword = !showPassword;
-		selfPasswordInput.type = showPassword ? 'text' : 'password';
-	}
 
 	let isFilled = false;
 
@@ -48,8 +40,6 @@
 			}
 		};
 	}
-
-	let selfPasswordInput: HTMLInputElement | undefined;
 </script>
 
 <!-- Unfortunately we had to create this long chain of types because that -->
@@ -59,7 +49,7 @@
 	{#if !floatLabel}
 		<label for={id}>{label}</label>
 	{/if}
-	<div class="input-field" class:password-input={type === 'password'}>
+	<div class="input-field">
 		{#if type === 'password'}
 			<input
 				on:input
@@ -69,7 +59,6 @@
 				{...inputProps}
 				class:filled={isFilled}
 				use:filled
-				bind:this={selfPasswordInput}
 				bind:value
 			/>
 		{:else if type === 'email'}
@@ -123,20 +112,7 @@
 		{#if floatLabel}
 			<label for={id}>{label}</label>
 		{/if}
-		{#if type === 'password'}
-			<button
-				type="button"
-				title={showPassword ? 'Hide password' : 'Show password'}
-				on:click={togglePassword}
-			>
-				<iconify-icon
-					icon="clarity:eye-{showPassword ? 'show-line' : 'hide-line'}"
-					width="24"
-					height="24"
-					style="color: #222222"
-				/>
-			</button>
-		{/if}
+		<slot name="icon-right" />
 	</div>
 	{#if error}
 		<small>{error}</small>
@@ -231,17 +207,6 @@
 
 		&.error {
 			border: 2px solid $error-color;
-		}
-	}
-
-	.password-input {
-		button {
-			@extend %reset;
-			position: absolute;
-			right: 0.75rem;
-			top: 50%;
-			transform: translateY(-50%);
-			cursor: pointer;
 		}
 	}
 
