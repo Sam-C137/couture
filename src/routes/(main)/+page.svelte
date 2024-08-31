@@ -6,8 +6,8 @@
 	import FeaturedCollections from './FeaturedCollections.svelte';
 	import VideoGallery from './VideoGallery.svelte';
 
-	export let data: PageData;
-	console.log(data);
+	// export let data: PageData;
+	// console.log(data);
 </script>
 
 <svelte:head>

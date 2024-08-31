@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Avatar from '$lib/components/ui/Avatar.svelte';
-	import { user } from '$lib/stores/user.store';
 	import { page } from '$app/stores';
-
 	import Dropdown from '$lib/components/ui/Dropdown.svelte';
+	import type { User } from 'lucia';
+
+	export let user: User | null;
 
 	$: path = $page.url.pathname;
 </script>
@@ -28,10 +29,10 @@
 		</li>
 	</ul>
 	<span class="end">
-		{#if $user}
+		{#if user}
 			<Dropdown>
 				<span slot="trigger">
-					<Avatar src={$user.image} alt={$user.displayName} />
+					<Avatar src={user.image} alt={user.displayName} />
 					<iconify-icon
 						icon="ic:baseline-keyboard-arrow-down"
 						width="30"

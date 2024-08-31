@@ -33,6 +33,9 @@
 <h3>Create an account</h3>
 
 <form method="post" action="?/register" use:enhance>
+	{#if $errors._errors}
+		<p class="error">{$errors._errors}</p>
+	{/if}
 	<Input
 		id="username"
 		name="username"
@@ -150,6 +153,10 @@
 
 		p {
 			@extend %text-subtext;
+			&.error {
+				color: $red-600;
+				text-align: center;
+			}
 		}
 
 		a {

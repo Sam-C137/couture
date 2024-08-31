@@ -23,6 +23,9 @@
 <h3>Login to your account</h3>
 
 <form method="post" action="?/login" use:enhance>
+	{#if $errors._errors}
+		<p class="error">{$errors._errors}</p>
+	{/if}
 	<Input
 		id="email"
 		name="email"
