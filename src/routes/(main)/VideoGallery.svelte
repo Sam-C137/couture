@@ -1,7 +1,7 @@
 <script lang="ts">
 	import VideoPlayerCard from '$lib/components/VideoPlayerCard.svelte';
 	import { onMount } from 'svelte';
-	import { isHtmlElement, screenSize } from '$lib/helpers';
+	import { isHtmlElement, screenSize } from '$lib/utils/helpers';
 
 	let reviews = [
 		{

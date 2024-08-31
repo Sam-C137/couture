@@ -1,25 +1,11 @@
 <script lang="ts">
 	import Avatar from '$lib/components/ui/Avatar.svelte';
 	import { user } from '$lib/stores/user.store';
-	import { page, navigating } from '$app/stores';
-	import NProgress from 'nprogress';
-	import 'nprogress/nprogress.css';
+	import { page } from '$app/stores';
 
-	NProgress.configure({
-		minimum: 0.16
-	});
+	import Dropdown from '$lib/components/ui/Dropdown.svelte';
 
 	$: path = $page.url.pathname;
-
-	$: {
-		if ($navigating) {
-			NProgress.start();
-		}
-
-		if (!$navigating) {
-			NProgress.done();
-		}
-	}
 </script>
 
 <nav>
@@ -43,7 +29,22 @@
 	</ul>
 	<span class="end">
 		{#if $user}
-			<Avatar src={$user.image} fallback={$user.displayName} />
+			<Dropdown>
+				<span slot="trigger">
+					<Avatar src={$user.image} alt={$user.displayName} />
+					<iconify-icon
+						icon="ic:baseline-keyboard-arrow-down"
+						width="30"
+						height="30"
+						style="color: var(--neutral-950)"
+					></iconify-icon>
+				</span>
+				<div slot="content">
+					<a href="/profile" role="menuitem">Profile</a>
+					<hr />
+					<a href="/logout" role="menuitem">Logout</a>
+				</div>
+			</Dropdown>
 		{:else}
 			<a href="/newsletter">Newsletter</a>
 			<a href="/login">Sign In</a>
@@ -141,7 +142,7 @@
 		}
 
 		.end {
-			a:last-child {
+			a[href='/login'] {
 				position: relative;
 				&:before {
 					content: '|';
@@ -150,6 +151,27 @@
 					margin-right: auto;
 					position: absolute;
 					left: -0.65rem;
+				}
+			}
+
+			[slot='trigger'] {
+				@extend %flex-row;
+				gap: 0.25rem;
+				align-items: center;
+			}
+
+			[slot='content'] {
+				> *:not(hr) {
+					padding: 0.25rem 0.5rem;
+					display: block;
+					&:hover {
+						background: $neutral-100;
+						border-radius: 0.5rem;
+					}
+				}
+				hr {
+					border: 1px solid $shell;
+					margin-block: 0.25rem;
 				}
 			}
 		}

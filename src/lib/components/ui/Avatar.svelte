@@ -1,16 +1,12 @@
 <script lang="ts">
-	import { initials } from '$lib/helpers';
+	import Avatar from '$lib/images/Avatar.png';
 
 	export let src: string | undefined = undefined;
-	export let fallback: string = '';
+	export let alt: string = '';
 </script>
 
 <button on:click>
-	{#if src}
-		<img {src} alt={fallback} />
-	{:else}
-		<p>{initials(fallback)}</p>
-	{/if}
+	<img src={src || Avatar} {alt} />
 </button>
 
 <style lang="scss">

@@ -50,6 +50,14 @@
         --blue-800: #2527ae;
         --blue-900: #262a89;
         --blue-950: #161650;
+
+        /* red */
+        --red-500: #ff2323;
+        --red-600: #ff0000;
+
+        /* green */
+        --green-500: #07e500;
+        --green-600: #00b800;
     }
 
     [data-theme="dark"] {
@@ -65,10 +73,12 @@
     body {
         background: var(--white);
         color: var(--neutral-950);
+        font-family: var(--font-body);
+        overflow-x: hidden;
     }
 }
 
 #nprogress .bar {
-    background: var(--blue-500) !important;
+    background: var(--yellow-500) !important;
     height: 0.25rem !important;
 }

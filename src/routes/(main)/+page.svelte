@@ -15,41 +15,48 @@
 	<meta name="description" content="Home of the exotic" />
 </svelte:head>
 
-<EditorPicks />
+<main>
+	<EditorPicks />
 
-<TodayArticles />
+	<TodayArticles />
 
-<HottestDesigners />
+	<HottestDesigners />
 
-<FeaturedCollections />
+	<FeaturedCollections />
 
-<VideoGallery />
+	<VideoGallery />
+</main>
 
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	:global(section) {
-		min-height: fit-content;
-		padding-inline: 5vw;
-		font-family: $font-body;
-		padding-top: 2rem;
-		@include xl {
-			padding-inline: 10vw;
+	main {
+		:global(section) {
+			min-height: fit-content;
+			padding-inline: 5vw;
+			font-family: $font-body;
+			padding-top: 2rem;
+			@include xl {
+				padding-inline: 10vw;
+			}
 		}
-	}
 
-	:global(h2, h3, h4, h5) {
-		font-family: $font-title;
-		font-weight: 400;
-		line-height: normal;
-	}
+		:global(h2),
+		:global(h3),
+		:global(h4),
+		:global(h5) {
+			font-family: $font-title;
+			font-weight: 400;
+			line-height: normal;
+		}
 
-	:global(h2) {
-		@extend %text-subheading;
-		font-weight: 700;
-	}
+		:global(h2) {
+			@extend %text-subheading;
+			font-weight: 700;
+		}
 
-	:global(h3) {
-		@extend %text-heading;
+		:global(h3) {
+			@extend %text-heading;
+		}
 	}
 </style>

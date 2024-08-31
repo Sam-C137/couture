@@ -17,7 +17,7 @@
 	<div class="flex-col">
 		<a href="/article/id?filter=fashion">The Best Swimsuits for your summer</a>
 		<div class="dona-info">
-			<Avatar src={donatella} fallback={'Donatella Versace'} />
+			<Avatar src={donatella} alt={'Donatella Versace'} />
 			<div class="dona-info-text">
 				<p>Donatella Versace</p>
 				<p>Founder & Owner of Versace</p>

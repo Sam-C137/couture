@@ -5,21 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Footer.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/Button.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/Dropdown.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/Input.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/Avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/images/login-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/server/uploadthing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/server/validate-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/style/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils/actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils/animation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils/uploadthing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils/validations.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/+layout.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/login/+page.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/login/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/login/google/+server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/login/google/GoogleButton.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/+layout.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/api/uploadthing/+server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/VideoPlayerCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/VideoPlayerCard.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/OptimizedImage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/OptimizedImage.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/stores/user.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/stores/user.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/style/_partials.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_partials.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/videos/gwen-stacy.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/videos/hueng-wei.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/videos/lisa-marie.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/videos/marie-winter.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/videos/mark-chimney.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/videos/olivia-rodrigo.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/videos/prissy-chapman.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/style/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/style/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/style/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/TodayArticles.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/TodayArticles.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/(main)/VideoGallery.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/VideoGallery.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +49,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="+layout" />
         <option value="CSS File" />
-        <option value="+page" />
-        <option value="SCSS File" />
         <option value="Navbar" />
         <option value="Avatar" />
-        <option value="+page.server" />
         <option value="EditorPicks" />
         <option value="TodayArticles" />
         <option value="HottestDesigners" />
@@ -44,7 +60,16 @@
         <option value="VideoGallery" />
         <option value="VideoPlayerCard" />
         <option value="RatingStars" />
+        <option value="Footer" />
+        <option value="Dropdown" />
+        <option value="Input" />
+        <option value="+page" />
+        <option value="+page.server" />
+        <option value="+layout" />
+        <option value="Button" />
+        <option value="GoogleButton" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -62,36 +87,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SamAckah/Desktop/Program Files/couture/src/lib/videos&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/SamAckah/Desktop/Program Files/couture/src/lib/images",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\videos" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\images" />
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\videos" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\images\caroussel" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\font" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\utils" />
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\routes\(auth)\login\google" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\components\ui" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\routes\(protected)" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\routes\(auth)\login" />
@@ -133,7 +160,7 @@
       <workItem from="1724684960291" duration="230000" />
       <workItem from="1724685304202" duration="29422000" />
       <workItem from="1724774035197" duration="3242000" />
-      <workItem from="1724789574890" duration="36763000" />
+      <workItem from="1724789574890" duration="81630000" />
     </task>
     <servers />
   </component>
