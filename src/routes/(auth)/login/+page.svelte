@@ -65,7 +65,7 @@
 	}
 
 	form {
-		width: 25rem;
+		width: min(25rem, 90vw);
 		min-width: 0;
 		max-width: 90rem;
 		margin-inline: auto;

@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/PasswordInput.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/register/+page.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/register/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Input.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Input.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/PasswordInput.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/PasswordInput.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/+layout.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/(auth)/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/login/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,14 +36,14 @@
         <option value="Footer" />
         <option value="Dropdown" />
         <option value="Input" />
-        <option value="+page" />
         <option value="+page.server" />
         <option value="+layout" />
         <option value="Button" />
         <option value="GoogleButton" />
-        <option value="TypeScript File" />
         <option value="SCSS File" />
         <option value="PasswordInput" />
+        <option value="TypeScript File" />
+        <option value="+page" />
       </list>
     </option>
   </component>
@@ -130,7 +134,7 @@
       <workItem from="1724684960291" duration="230000" />
       <workItem from="1724685304202" duration="29422000" />
       <workItem from="1724774035197" duration="3242000" />
-      <workItem from="1724789574890" duration="83384000" />
+      <workItem from="1724789574890" duration="88602000" />
     </task>
     <servers />
   </component>

@@ -37,7 +37,7 @@
 				icon="clarity:eye-{showPassword ? 'show-line' : 'hide-line'}"
 				width="24"
 				height="24"
-				style="color: #222222"
+				style="color: var(--neutral-950)"
 			/>
 		</button>
 	</Input>
@@ -48,7 +48,7 @@
 				icon="clarity:eye-{showPassword ? 'show-line' : 'hide-line'}"
 				width="24"
 				height="24"
-				style="color: #222222"
+				style="color: var(--neutral-950)"
 			/>
 		</button>
 	</Input>

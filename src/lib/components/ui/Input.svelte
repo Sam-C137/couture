@@ -24,22 +24,7 @@
 
 	$: useParseNumber = type === 'number' || type === 'tel' ? parseNumber : () => {};
 
-	let isFilled = false;
-
-	function filled(node: HTMLInputElement) {
-		const handleInput = (event: Event) => {
-			const value = (event.target as HTMLInputElement)?.value;
-			isFilled = value.length > 0;
-		};
-
-		node.addEventListener('input', handleInput);
-
-		return {
-			destroy() {
-				node.removeEventListener('input', handleInput);
-			}
-		};
-	}
+	$: isFilled = value.length > 0;
 </script>
 
 <!-- Unfortunately we had to create this long chain of types because that -->
@@ -50,6 +35,7 @@
 		<label for={id}>{label}</label>
 	{/if}
 	<div class="input-field">
+		<slot name="icon-left" />
 		{#if type === 'password'}
 			<input
 				on:input
@@ -58,7 +44,6 @@
 				type="password"
 				{...inputProps}
 				class:filled={isFilled}
-				use:filled
 				bind:value
 			/>
 		{:else if type === 'email'}
@@ -70,7 +55,6 @@
 				{...inputProps}
 				class:filled={isFilled}
 				use:useParseNumber
-				use:filled
 				bind:value
 			/>
 		{:else if type === 'tel'}
@@ -82,7 +66,6 @@
 				{...inputProps}
 				class:filled={isFilled}
 				use:useParseNumber
-				use:filled
 				bind:value
 			/>
 		{:else if type === 'number'}
@@ -94,7 +77,6 @@
 				{...inputProps}
 				class:filled={isFilled}
 				use:useParseNumber
-				use:filled
 				bind:value
 			/>
 		{:else}
@@ -105,7 +87,6 @@
 				type="text"
 				{...inputProps}
 				class:filled={isFilled}
-				use:filled
 				bind:value
 			/>
 		{/if}
@@ -219,14 +200,16 @@
 			border: 2px solid $error-color;
 
 			&:focus,
-			&:valid {
+			&:valid,
+			&.filled {
 				border: 2px solid $error-color;
 			}
 		}
 
 		.float-label {
 			input:focus ~ label,
-			input:valid ~ label {
+			input:valid ~ label,
+			input.filled ~ label {
 				color: $error-color;
 			}
 		}

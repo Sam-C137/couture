@@ -21,7 +21,7 @@
 
 	main {
 		padding-inline: 5vw;
-		padding-block: 10dvh;
+		padding-block: 8dvh;
 
 		&::before {
 			content: '';
@@ -55,7 +55,7 @@
 				font-family: $font-title;
 				font-size: 2rem;
 				text-align: center;
-				margin-bottom: 3rem;
+				margin-bottom: 2.5rem;
 				text-transform: uppercase;
 				position: relative;
 				z-index: 0;
