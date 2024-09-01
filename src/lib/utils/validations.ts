@@ -11,7 +11,11 @@ export const loginSchema = z.object({
 
 export const registerSchema = z
 	.object({
-		username: z.string().min(1, 'Your name').max(64, 'Your name seems a bit too long').trim(),
+		username: z
+			.string()
+			.min(1, 'Your name is required')
+			.max(64, 'Your name seems a bit too long')
+			.trim(),
 		email: z
 			.string()
 			.min(1, 'Email is required')
@@ -33,4 +37,17 @@ export const registerSchema = z
 				path: ['passwordConfirm']
 			});
 		}
+	});
+
+export const requestPasswordResetSchema = loginSchema.pick({ email: true });
+
+export const passwordResetSchema = z
+	.object({
+		newPassword: z.string().min(8, 'Password must be at least 8 characters').trim(),
+		confirmPassword: z.string().min(8, 'Password must be at least 8 characters').trim(),
+		passwordResetToken: z.string().optional()
+	})
+	.refine(({ newPassword, confirmPassword }) => newPassword === confirmPassword, {
+		message: 'Password and password confirmation must match',
+		path: ['confirmPassword']
 	});

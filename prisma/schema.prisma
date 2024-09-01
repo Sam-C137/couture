@@ -14,13 +14,15 @@ datasource db {
 }
 
 model User {
-  id           String    @id
-  username     String    @unique
-  email        String    @unique
-  passwordHash String
-  bio          String?
-  image        String?
-  sessions     Session[]
+  id                  String               @id
+  username            String               @unique
+  email               String               @unique
+  passwordHash        String?
+  googleId            String?              @unique
+  bio                 String?
+  image               String?
+  sessions            Session[]
+  passwordResetTokens PasswordResetToken[]
 
   createdAt DateTime @default(now())
 
@@ -35,4 +37,14 @@ model Session {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("sessions")
+}
+
+model PasswordResetToken {
+  id     String @id @unique
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  expiresAt DateTime
+
+  @@map("password_reset_tokens")
 }

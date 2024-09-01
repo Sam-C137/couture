@@ -1,13 +1,9 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import EditorPicks from './EditorPicks.svelte';
 	import TodayArticles from './TodayArticles.svelte';
 	import HottestDesigners from './HottestDesigners.svelte';
 	import FeaturedCollections from './FeaturedCollections.svelte';
 	import VideoGallery from './VideoGallery.svelte';
-
-	// export let data: PageData;
-	// console.log(data);
 </script>
 
 <svelte:head>

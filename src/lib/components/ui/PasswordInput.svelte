@@ -10,6 +10,8 @@
 	export let className: string = '';
 	export let required: boolean = false;
 	export let error: string | undefined = undefined;
+	export let maxLength: number | undefined = undefined;
+	export let minLength: number | undefined = undefined;
 
 	let showPassword = false;
 
@@ -22,7 +24,9 @@
 		floatLabel,
 		placeholder,
 		className,
-		error
+		error,
+		maxLength,
+		minLength
 	};
 
 	function togglePassword() {

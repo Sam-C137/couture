@@ -1,6 +1,5 @@
 <script lang="ts">
 	let isOpen = false;
-	import { fade, slide } from 'svelte/transition';
 	import { moveDownOut } from '$lib/utils/animation';
 	import { clickOutside } from '$lib/utils/actions';
 </script>

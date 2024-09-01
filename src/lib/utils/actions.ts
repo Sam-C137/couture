@@ -33,3 +33,39 @@ export function parseNumber(node: HTMLInputElement) {
 		}
 	};
 }
+
+export function maxInputLength(node: HTMLInputElement, maxLength: number) {
+	const handleInput = (event: Event) => {
+		const value = (event.target as HTMLInputElement)?.value;
+		if (value.length > maxLength) {
+			event.preventDefault();
+			(event.target as HTMLInputElement).value = value.slice(0, maxLength);
+		}
+	};
+
+	node.addEventListener('input', handleInput);
+
+	return {
+		destroy() {
+			node.removeEventListener('input', handleInput);
+		}
+	};
+}
+
+export function minInputLength(node: HTMLInputElement, minLength: number) {
+	const handleInput = (event: Event) => {
+		const value = (event.target as HTMLInputElement)?.value;
+		if (value.length < minLength) {
+			event.preventDefault();
+			(event.target as HTMLInputElement).value = value.slice(0, minLength);
+		}
+	};
+
+	node.addEventListener('input', handleInput);
+
+	return {
+		destroy() {
+			node.removeEventListener('input', handleInput);
+		}
+	};
+}

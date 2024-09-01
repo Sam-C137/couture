@@ -10,7 +10,7 @@
 
 	export let data: PageData;
 
-	const { form, errors, enhance, submitting } = superForm(data.form, {
+	const { form, errors, enhance, submitting, message } = superForm(data.form, {
 		validators: zod(loginSchema)
 	});
 </script>
@@ -23,8 +23,8 @@
 <h3>Login to your account</h3>
 
 <form method="post" action="?/login" use:enhance>
-	{#if $errors._errors}
-		<p class="error">{$errors._errors}</p>
+	{#if $message}
+		<p class="error">{$message}</p>
 	{/if}
 	<Input
 		id="email"

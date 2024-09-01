@@ -1,7 +1,7 @@
 import { type Actions, fail, redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { loginSchema } from '$lib/utils/validations';
-import { setError, superValidate } from 'sveltekit-superforms';
+import { message, setError, superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import prisma from '$lib/server/prisma';
 import { compare } from 'bcrypt';
@@ -51,7 +51,7 @@ export const actions: Actions = {
 		} catch (e) {
 			console.error(e);
 
-			return setError(form, '', 'Something went wrong. Please try again', {
+			return message(form, 'Something went wrong. Please try again', {
 				status: 500
 			});
 		}

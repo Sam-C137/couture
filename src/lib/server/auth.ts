@@ -1,7 +1,10 @@
 import { Lucia } from 'lucia';
 import { dev } from '$app/environment';
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from '$env/static/private';
+import { PUBLIC_BASE_URL } from '$env/static/public';
 import { PrismaAdapter } from '@lucia-auth/adapter-prisma';
 import prisma from '$lib/server/prisma';
+import { Google } from 'arctic';
 
 const adapter = new PrismaAdapter(prisma.session, prisma.user);
 
@@ -39,3 +42,9 @@ declare module 'lucia' {
 		DatabaseUserAttributes: DatabaseUserAttributes;
 	}
 }
+
+export const google = new Google(
+	GOOGLE_CLIENT_ID,
+	GOOGLE_CLIENT_SECRET,
+	`${PUBLIC_BASE_URL}/api/auth/google`
+);

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { parseNumber } from '$lib/utils/actions';
+	import { maxInputLength, minInputLength, parseNumber } from '$lib/utils/actions';
 
 	export let id: string;
 	export let name: string;
@@ -11,6 +11,8 @@
 	export let required: boolean = false;
 	export let type: 'text' | 'number' | 'tel' | 'email' | 'password' = 'text';
 	export let error: string | undefined = undefined;
+	export let maxLength: number | undefined = undefined;
+	export let minLength: number | undefined = undefined;
 
 	$: inputProps = {
 		id,
@@ -24,10 +26,18 @@
 
 	$: useParseNumber = type === 'number' || type === 'tel' ? parseNumber : () => {};
 
+	function useMinlength(node: HTMLInputElement) {
+		return minLength ? minInputLength(node, minLength) : {};
+	}
+
+	function useMaxlength(node: HTMLInputElement) {
+		return maxLength ? maxInputLength(node, maxLength) : {};
+	}
+
 	$: isFilled = value.length > 0;
 </script>
 
-<!-- Unfortunately we had to create this long chain of types because that -->
+<!-- Unfortunately we have to create this long chain of types because that -->
 <!-- is the only way to forward up a bind:value without infringing the no dynamic type rule -->
 
 <div class="input-wrapper" class:float-label={floatLabel} class:has-error={error}>
@@ -41,53 +51,73 @@
 				on:input
 				on:focus
 				on:blur
+				on:keyup
+				on:keydown
 				type="password"
 				{...inputProps}
 				class:filled={isFilled}
 				bind:value
+				use:useMinlength
+				use:useMaxlength
 			/>
 		{:else if type === 'email'}
 			<input
 				on:input
 				on:focus
 				on:blur
+				on:keyup
+				on:keydown
 				type="email"
 				{...inputProps}
 				class:filled={isFilled}
 				use:useParseNumber
 				bind:value
+				use:useMinlength
+				use:useMaxlength
 			/>
 		{:else if type === 'tel'}
 			<input
 				on:input
 				on:focus
 				on:blur
+				on:keyup
+				on:keydown
 				type="tel"
 				{...inputProps}
 				class:filled={isFilled}
 				use:useParseNumber
 				bind:value
+				use:useMinlength
+				use:useMaxlength
 			/>
 		{:else if type === 'number'}
 			<input
 				on:input
 				on:focus
 				on:blur
+				on:keyup
+				on:keydown
 				type="number"
 				{...inputProps}
 				class:filled={isFilled}
 				use:useParseNumber
 				bind:value
+				use:useMinlength
+				use:useMaxlength
 			/>
 		{:else}
 			<input
 				on:input
 				on:focus
 				on:blur
+				on:keyup
+				on:keydown
 				type="text"
 				{...inputProps}
 				class:filled={isFilled}
 				bind:value
+				use:useMinlength
+				use:useMaxlength
 			/>
 		{/if}
 		{#if floatLabel}
