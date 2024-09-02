@@ -1,4 +1,5 @@
 import { lucia } from '$lib/server/auth';
+import { redirect } from '@sveltejs/kit';
 
 export async function GET({ locals, cookies }) {
 	if (!locals.session) {
@@ -12,5 +13,5 @@ export async function GET({ locals, cookies }) {
 		...sessionCookie.attributes
 	});
 
-	return Response.redirect('/login');
+	redirect(302, '/login');
 }

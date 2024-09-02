@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { maxInputLength, minInputLength, parseNumber } from '$lib/utils/actions';
+	import { onMount } from 'svelte';
 
 	export let id: string;
 	export let name: string;
@@ -35,10 +36,16 @@
 	}
 
 	$: isFilled = value.length > 0;
-</script>
 
-<!-- Unfortunately we have to create this long chain of types because that -->
-<!-- is the only way to forward up a bind:value without infringing the no dynamic type rule -->
+	let self: HTMLInputElement | undefined;
+
+	// workaround for no dynamic type binding
+	onMount(() => {
+		if (self) {
+			self.type = type;
+		}
+	});
+</script>
 
 <div class="input-wrapper" class:float-label={floatLabel} class:has-error={error}>
 	{#if !floatLabel}
@@ -46,80 +53,20 @@
 	{/if}
 	<div class="input-field">
 		<slot name="icon-left" />
-		{#if type === 'password'}
-			<input
-				on:input
-				on:focus
-				on:blur
-				on:keyup
-				on:keydown
-				type="password"
-				{...inputProps}
-				class:filled={isFilled}
-				bind:value
-				use:useMinlength
-				use:useMaxlength
-			/>
-		{:else if type === 'email'}
-			<input
-				on:input
-				on:focus
-				on:blur
-				on:keyup
-				on:keydown
-				type="email"
-				{...inputProps}
-				class:filled={isFilled}
-				use:useParseNumber
-				bind:value
-				use:useMinlength
-				use:useMaxlength
-			/>
-		{:else if type === 'tel'}
-			<input
-				on:input
-				on:focus
-				on:blur
-				on:keyup
-				on:keydown
-				type="tel"
-				{...inputProps}
-				class:filled={isFilled}
-				use:useParseNumber
-				bind:value
-				use:useMinlength
-				use:useMaxlength
-			/>
-		{:else if type === 'number'}
-			<input
-				on:input
-				on:focus
-				on:blur
-				on:keyup
-				on:keydown
-				type="number"
-				{...inputProps}
-				class:filled={isFilled}
-				use:useParseNumber
-				bind:value
-				use:useMinlength
-				use:useMaxlength
-			/>
-		{:else}
-			<input
-				on:input
-				on:focus
-				on:blur
-				on:keyup
-				on:keydown
-				type="text"
-				{...inputProps}
-				class:filled={isFilled}
-				bind:value
-				use:useMinlength
-				use:useMaxlength
-			/>
-		{/if}
+		<input
+			on:input
+			on:focus
+			on:blur
+			on:keyup
+			on:keydown
+			bind:this={self}
+			{...inputProps}
+			class:filled={isFilled}
+			bind:value
+			use:useParseNumber
+			use:useMinlength
+			use:useMaxlength
+		/>
 		{#if floatLabel}
 			<label for={id}>{label}</label>
 		{/if}
@@ -164,7 +111,6 @@
 		}
 
 		input:focus ~ label,
-		input:valid ~ label,
 		input.filled ~ label {
 			top: 0;
 			font-size: $label-font-size;
@@ -176,7 +122,6 @@
 			color: $active-color;
 		}
 
-		input:valid ~ label,
 		input.filled ~ label {
 			color: $color;
 		}
@@ -202,7 +147,6 @@
 			border: 2px solid $active-color;
 		}
 
-		&:valid,
 		&.filled {
 			border: 2px solid $color;
 		}
@@ -230,7 +174,6 @@
 			border: 2px solid $error-color;
 
 			&:focus,
-			&:valid,
 			&.filled {
 				border: 2px solid $error-color;
 			}
@@ -238,7 +181,6 @@
 
 		.float-label {
 			input:focus ~ label,
-			input:valid ~ label,
 			input.filled ~ label {
 				color: $error-color;
 			}

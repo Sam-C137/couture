@@ -11,7 +11,7 @@
 
 	export let data: PageData;
 
-	const { form, errors, enhance, submitting, message } = superForm(data.form, {
+	const { form, errors, enhance, submitting, message, delayed } = superForm(data.form, {
 		validators: zod(registerSchema)
 	});
 
@@ -119,7 +119,7 @@
 		bind:value={$form.passwordConfirm}
 		error={$errors.passwordConfirm?.at(0)}
 	/>
-	<Button type="submit" loading={$submitting}>Create Account</Button>
+	<Button type="submit" loading={$submitting} disabled={$delayed}>Create Account</Button>
 	<div class="separator">
 		<div></div>
 		<span>OR</span>
@@ -132,54 +132,7 @@
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	h3 {
-		color: $neutral-950;
-		font-size: 1.75rem;
-		text-align: center;
-		margin-bottom: 2rem;
-		font-family: $font-title;
-	}
-
 	form {
-		width: min(25rem, 90vw);
-		min-width: 0;
-		max-width: 90rem;
-		margin-inline: auto;
-		@extend %flex-column;
-		gap: 1rem;
-
-		--button-width: 100%;
-		--button-padding: 0.75rem 1rem;
-
-		p {
-			@extend %text-subtext;
-			&.error {
-				color: $red-600;
-				text-align: center;
-			}
-		}
-
-		a {
-			@extend %text-subtext;
-			color: $blue-600;
-			margin-top: -0.35rem;
-		}
-
-		.separator {
-			@extend %flex-row;
-			align-items: center;
-			gap: 0.5rem;
-			> div {
-				height: 1px;
-				flex: 1;
-				background: $neutral-300;
-			}
-			span {
-				font-family: $font-body;
-				color: $neutral-300;
-			}
-		}
-
 		.metrics {
 			@extend %text-subtext;
 		}

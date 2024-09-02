@@ -1,8 +1,14 @@
-import { Resend } from 'resend';
-import { RESEND_API_KEY } from '$env/static/private';
+import nodemailer from 'nodemailer';
+import { EMAIL_USER, EMAIL_USER_PASSWORD } from '$env/static/private';
 import { PUBLIC_BASE_URL } from '$env/static/public';
 
-const resend = new Resend(RESEND_API_KEY);
+export const transporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: EMAIL_USER,
+		pass: EMAIL_USER_PASSWORD
+	}
+});
 
 type EmailParams = {
 	to: string;
@@ -15,29 +21,29 @@ export async function sendEmail({
 	subject,
 	htmlContent
 }: EmailParams): Promise<{ success: boolean; message: string }> {
-	const { error } = await resend.emails.send({
-		from: 'Couture <couture@gmail.com>',
-		to,
-		subject,
-		html: htmlContent
-	});
+	try {
+		await transporter.sendMail({
+			from: EMAIL_USER,
+			to,
+			subject,
+			html: htmlContent
+		});
 
-	if (error) {
-		console.error(error);
+		return {
+			success: true,
+			message: `Email sent to ${to}`
+		};
+	} catch (e) {
+		console.error(e);
 		return {
 			success: false,
-			message: `Failed to send email ${error.message}`
+			message: `Failed to send email ${JSON.stringify(e)}`
 		};
 	}
-
-	return {
-		success: true,
-		message: `Email sent to ${to}`
-	};
 }
 
-export class AuthEmail {
-	static async passwordReset(to: string, resetToken: string) {
+export class EmailService {
+	static async sendPasswordReset(to: string, resetToken: string) {
 		const htmlContent = `
 		<div style="font-family: Arial, sans-serif; font-size: 16px;">
 			<h1>Password Reset</h1>

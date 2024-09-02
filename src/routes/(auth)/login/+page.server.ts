@@ -32,7 +32,7 @@ export const actions: Actions = {
 				}
 			});
 
-			if (!existingUser) {
+			if (!existingUser || !existingUser.passwordHash) {
 				return setError(form, 'email', 'User with this email does not exist');
 			}
 

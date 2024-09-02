@@ -1,19 +1,26 @@
 <script lang="ts">
-	export let variant: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link' =
-		'default';
+	export let variant:
+		| 'default'
+		| 'destructive'
+		| 'outline'
+		| 'secondary'
+		| 'ghost'
+		| 'link'
+		| 'inverted' = 'default';
 	export let type: HTMLButtonElement['type'] = 'button';
 	export let disabled: boolean = false;
 	export let loading: boolean = false;
+	export let role: string = 'button';
 </script>
 
-<button data-variant={variant} {type} {disabled} class:loading-button={loading}>
+<button data-variant={variant} {type} {disabled} class:loading-button={loading} {role}>
 	{#if loading}
 		<div class="load-wrapper">
 			<slot />
 			<iconify-icon
 				icon="icomoon-free:spinner2"
-				width="24"
-				height="24"
+				width="18"
+				height="18"
 				class="animate-spin"
 				style="color: inherit; justify-self: flex-end"
 			></iconify-icon>
@@ -80,7 +87,7 @@
 			}
 		}
 
-		&[data-variant='ghost'] {
+		&[data-variant='inverted'] {
 			background: transparent;
 			color: $neutral-950;
 
@@ -88,6 +95,12 @@
 				background: $neutral-950;
 				color: $color-1;
 			}
+		}
+
+		&[data-variant='ghost'] {
+			background: transparent;
+			color: inherit;
+			padding: 0;
 		}
 
 		&[data-variant='link'] {

@@ -10,7 +10,7 @@
 
 	export let data: PageData;
 
-	const { form, errors, enhance, submitting, message } = superForm(data.form, {
+	const { form, errors, enhance, submitting, message, delayed } = superForm(data.form, {
 		validators: zod(loginSchema)
 	});
 </script>
@@ -45,8 +45,8 @@
 		bind:value={$form.password}
 		error={$errors.password?.at(0)}
 	/>
-	<a href="/reset-password">Forgot your password?</a>
-	<Button type="submit" loading={$submitting}>Login</Button>
+	<a href="/forgot-password">Forgot your password?</a>
+	<Button type="submit" loading={$submitting} disabled={$delayed}>Login</Button>
 	<div class="separator">
 		<div></div>
 		<span>OR</span>
@@ -55,52 +55,3 @@
 	<GoogleButton />
 	<p>Don't have an account? <a href="/register">Create one</a></p>
 </form>
-
-<style lang="scss">
-	@use '$lib/style/main' as *;
-
-	h3 {
-		color: $neutral-950;
-		font-size: 1.75rem;
-		text-align: center;
-		margin-bottom: 2rem;
-		font-family: $font-title;
-	}
-
-	form {
-		width: min(25rem, 90vw);
-		min-width: 0;
-		max-width: 90rem;
-		margin-inline: auto;
-		@extend %flex-column;
-		gap: 1rem;
-
-		--button-width: 100%;
-		--button-padding: 0.75rem 1rem;
-
-		p {
-			@extend %text-subtext;
-		}
-
-		a {
-			@extend %text-subtext;
-			color: $blue-600;
-			margin-top: -0.35rem;
-		}
-
-		.separator {
-			@extend %flex-row;
-			align-items: center;
-			gap: 0.5rem;
-			> div {
-				height: 1px;
-				flex: 1;
-				background: $neutral-300;
-			}
-			span {
-				font-family: $font-body;
-				color: $neutral-300;
-			}
-		}
-	}
-</style>

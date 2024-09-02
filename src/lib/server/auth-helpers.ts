@@ -60,11 +60,9 @@ export async function isSamePassword(userId: string, password: string): Promise<
 		}
 	});
 
-	if (!user) {
+	if (!user || !user.passwordHash) {
 		return false;
 	}
 
 	return compare(password, user.passwordHash);
 }
-
-export function sendPasswordResetEmail(email: string, token: string) {}

@@ -43,7 +43,7 @@
 				<div slot="content">
 					<a href="/profile" role="menuitem">Profile</a>
 					<hr />
-					<a href="/logout" role="menuitem">Logout</a>
+					<a href="/api/auth/logout">Logout</a>
 				</div>
 			</Dropdown>
 		{:else}
@@ -83,11 +83,16 @@
 			gap: 1rem;
 		}
 
+		a {
+			cursor: pointer;
+		}
+
 		li {
 			overflow: hidden;
 			position: relative;
 			padding-block: calc(var(--_gap) / 2);
 			padding-inline: 0.25rem;
+			cursor: pointer;
 
 			&:hover,
 			&:focus-within,
