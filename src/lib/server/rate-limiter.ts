@@ -30,4 +30,9 @@ export default class RateLimiter implements RequestRates<RateLimiter> {
 		'password-reset-request',
 		'password-reset-request-secret'
 	);
+
+	public static passwordResetForm = rateLimiter(
+		'password-reset-form',
+		'password-reset-form-secret'
+	);
 }

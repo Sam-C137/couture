@@ -50,6 +50,12 @@ export const actions: Actions = {
 				return setError(form, 'email', 'User with this email does not exist');
 			}
 
+			if (existingUser.googleId) {
+				return message(form, 'You cannot reset the password for a Google account', {
+					status: 400
+				});
+			}
+
 			const resetToken = await createPasswordResetToken(existingUser.id);
 
 			const { success } = await EmailService.sendPasswordReset(

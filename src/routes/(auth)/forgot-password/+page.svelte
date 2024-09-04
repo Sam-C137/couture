@@ -17,14 +17,35 @@
 		onUpdate: ({ form, result }) => {
 			if (result.type === 'success') view = 'success';
 			userEmail = form.data.email;
-			updateForm();
+		},
+		onResult: ({ result }) => {
+			if (result.status === 429) {
+				const time = (
+					result as typeof result & {
+						data: {
+							form: {
+								message: string;
+							};
+						};
+					}
+				).data.form.message?.match(/\d+/)?.[0];
+				countDown(time);
+			}
 		}
 	});
 
-	function updateForm() {
-		form.update(() => ({
-			email: userEmail
-		}));
+	function countDown(time: string | undefined) {
+		if (time) {
+			let count = parseInt(time);
+			const interval = setInterval(() => {
+				count--;
+				message.set(`Too many requests. Please wait ${count} seconds before trying again.`);
+				if (count === 0) {
+					clearInterval(interval);
+					message.set('');
+				}
+			}, 1000);
+		}
 	}
 </script>
 
@@ -62,7 +83,7 @@
 			An email has been sent to <strong>{userEmail}</strong> your inbox with instructions to reset
 			your password. Please check your email and follow the link provided to complete the process.
 		</p>
-		<input type="hidden" name="email" bind:value={$form.email} />
+		<input type="hidden" name="email" value={userEmail} />
 		<Button type="submit" loading={$submitting} disabled={$delayed}>Resend Link</Button>
 	</form>
 {/if}

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Avatar from '$lib/images/Avatar.png';
+	import avatar from '$lib/images/Avatar.png';
 
 	export let src: string | undefined = undefined;
 	export let alt: string = '';
 </script>
 
 <button on:click>
-	<img src={src || Avatar} {alt} />
+	<img src={src || avatar} {alt} />
 </button>
 
 <style lang="scss">

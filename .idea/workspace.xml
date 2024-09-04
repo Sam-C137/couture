@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/server/rate-limiter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Button.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Button.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Input.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Input.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/server/auth-helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/server/auth-helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/server/email.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/server/email.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/+layout.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/login/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/login/+page.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/login/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/register/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/register/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/api/auth/logout/+server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api/auth/logout/+server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/server/rate-limiter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/server/rate-limiter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +133,7 @@
       <workItem from="1724684960291" duration="230000" />
       <workItem from="1724685304202" duration="29422000" />
       <workItem from="1724774035197" duration="3242000" />
-      <workItem from="1724789574890" duration="124099000" />
+      <workItem from="1724789574890" duration="132356000" />
     </task>
     <servers />
   </component>
