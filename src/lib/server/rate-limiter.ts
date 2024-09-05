@@ -13,7 +13,7 @@ export function rateLimiter(cookieName: string, cookieSecret: string) {
 		*/
 			name: cookieName, // Unique cookie name for this limiter
 			secret: cookieSecret,
-			rate: [2, 'm'], // Allows up to  2 requests per minute from the same browser session
+			rate: [4, 'm'], // Allows up to  2 requests per minute from the same browser session
 			preflight: true // Require preflight call (see load function)
 		}
 	});
@@ -31,7 +31,12 @@ export default class RateLimiter implements RequestRates<RateLimiter> {
 		'password-reset-request-secret'
 	);
 
-	public static passwordResetForm = rateLimiter(
+	public static passwordResetNewLinkRequest = rateLimiter(
+		'password-reset-new-link-request',
+		'password-reset-new-link-request-secret'
+	);
+
+	public static passwordResetFormRequest = rateLimiter(
 		'password-reset-form',
 		'password-reset-form-secret'
 	);

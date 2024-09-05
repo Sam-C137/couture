@@ -30,7 +30,7 @@
 	<meta name="description" content="Login to your account" />
 </svelte:head>
 
-<h3>Create an account</h3>
+<h6>Create an account</h6>
 
 <form method="post" action="?/register" use:enhance>
 	{#if $message}

@@ -2,10 +2,8 @@
 	import { page } from '$app/stores';
 
 	$: backButtonMapping = {
-		path: ['/login', '/register'].includes($page.url.pathname) ? '/' : '/login',
-		text: ['/login', '/register'].includes($page.url.pathname)
-			? 'Back to site'
-			: 'Back to login'
+		path: ['/login'].includes($page.url.pathname) ? '/' : '/login',
+		text: ['/login'].includes($page.url.pathname) ? 'Back to site' : 'Back to login'
 	};
 </script>
 
@@ -87,7 +85,7 @@
 	/**
 	 * Global form styling
 	 */
-	:global(h3) {
+	:global(h6) {
 		color: $neutral-950;
 		font-size: 1.75rem;
 		text-align: center;

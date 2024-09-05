@@ -1,16 +1,43 @@
-import { type Actions, fail, redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { message, setError, superValidate } from 'sveltekit-superforms';
-import { requestPasswordResetSchema } from '$lib/utils/validations';
-import { zod } from 'sveltekit-superforms/adapters';
-import prisma from '$lib/server/prisma';
+import { type Actions, fail, redirect } from '@sveltejs/kit';
 import RateLimiter from '$lib/server/rate-limiter';
+import { message, setError, superValidate } from 'sveltekit-superforms';
+import { zod } from 'sveltekit-superforms/adapters';
+import { requestPasswordResetSchema } from '$lib/utils/validations';
+import prisma from '$lib/server/prisma';
 import { createPasswordResetToken } from '$lib/server/auth-helpers';
 import { EmailService } from '$lib/server/email';
 
 export const load: PageServerLoad = async (event) => {
-	await RateLimiter.passwordResetRequest.cookieLimiter?.preflight(event);
-	const form = await superValidate(zod(requestPasswordResetSchema));
+	const email = event.url.searchParams.get('email');
+
+	if (!email) {
+		throw redirect(302, '/login');
+	}
+
+	const userRequestedReset = await prisma.user.findFirst({
+		where: {
+			email
+		},
+		select: {
+			_count: {
+				select: {
+					passwordResetTokens: true
+				}
+			}
+		}
+	});
+
+	if (!userRequestedReset) {
+		throw redirect(302, '/login');
+	}
+
+	if (userRequestedReset._count.passwordResetTokens < 1) {
+		throw redirect(302, '/login');
+	}
+
+	await RateLimiter.passwordResetNewLinkRequest.cookieLimiter?.preflight(event);
+	const form = await superValidate({ email }, zod(requestPasswordResetSchema));
 
 	return {
 		form
@@ -28,7 +55,8 @@ export const actions: Actions = {
 		try {
 			const { email } = form.data;
 
-			const { limited, retryAfter } = await RateLimiter.passwordResetRequest.check(event);
+			const { limited, retryAfter } =
+				await RateLimiter.passwordResetNewLinkRequest.check(event);
 
 			if (limited) {
 				return message(
@@ -47,7 +75,9 @@ export const actions: Actions = {
 			});
 
 			if (!existingUser) {
-				return setError(form, 'email', 'User with this email does not exist');
+				return message(form, 'User with this email does not exist', {
+					status: 400
+				});
 			}
 
 			if (existingUser.googleId) {
@@ -72,6 +102,10 @@ export const actions: Actions = {
 					}
 				);
 			}
+
+			return {
+				form
+			};
 		} catch (e) {
 			console.error(e);
 
@@ -79,7 +113,5 @@ export const actions: Actions = {
 				status: 500
 			});
 		}
-
-		return redirect(302, `/request-reset-success?email=${form.data.email}`);
 	}
 };

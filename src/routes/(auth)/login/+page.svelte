@@ -20,7 +20,7 @@
 	<meta name="description" content="Login to your account" />
 </svelte:head>
 
-<h3>Login to your account</h3>
+<h6>Login to your account</h6>
 
 <form method="post" action="?/login" use:enhance>
 	{#if $message}

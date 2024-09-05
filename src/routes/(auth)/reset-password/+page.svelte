@@ -7,6 +7,7 @@
 	import { passwordResetSchema } from '$lib/utils/validations';
 	import PasswordInput from '$lib/components/ui/PasswordInput.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
+	import { setCountdownMessage } from '$lib/utils/countdown';
 
 	export let data: PageData;
 
@@ -19,33 +20,10 @@
 		},
 		onResult: ({ result }) => {
 			if (result.status === 429) {
-				const time = (
-					result as typeof result & {
-						data: {
-							form: {
-								message?: string;
-							};
-						};
-					}
-				).data.form.message?.match(/\d+/)?.[0];
-				countDown(time);
+				setCountdownMessage(result, message);
 			}
 		}
 	});
-
-	function countDown(time: string | undefined) {
-		if (time) {
-			let count = parseInt(time);
-			const interval = setInterval(() => {
-				count--;
-				message.set(`Too many requests. Please wait ${count} seconds before trying again.`);
-				if (count === 0) {
-					clearInterval(interval);
-					message.set('');
-				}
-			}, 1000);
-		}
-	}
 
 	$: view = !success ? 'error' : 'form';
 </script>
@@ -55,7 +33,7 @@
 	<meta name="description" content="Reset Your Password" />
 </svelte:head>
 
-<h3>Reset Password</h3>
+<h6>Reset Password</h6>
 
 {#if view === 'error'}
 	<div>

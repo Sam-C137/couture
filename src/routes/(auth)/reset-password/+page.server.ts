@@ -10,7 +10,7 @@ import { lucia } from '$lib/server/auth';
 import prisma from '$lib/server/prisma';
 
 export const load: PageServerLoad = async (event) => {
-	await RateLimiter.passwordResetForm.cookieLimiter?.preflight(event);
+	await RateLimiter.passwordResetFormRequest.cookieLimiter?.preflight(event);
 	const form = await superValidate(zod(passwordResetSchema));
 	const token = event.url.searchParams.get('token');
 
@@ -33,7 +33,7 @@ export const actions: Actions = {
 		}
 
 		try {
-			const { limited, retryAfter } = await RateLimiter.passwordResetForm.check(event);
+			const { limited, retryAfter } = await RateLimiter.passwordResetFormRequest.check(event);
 
 			if (limited) {
 				return message(
