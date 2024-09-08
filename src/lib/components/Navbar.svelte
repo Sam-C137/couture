@@ -4,7 +4,7 @@
 	import Dropdown from '$lib/components/ui/Dropdown.svelte';
 	import type { User } from 'lucia';
 
-	export let user: User | null;
+	const { user } = $page.data as { user?: User };
 
 	$: path = $page.url.pathname;
 </script>

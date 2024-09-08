@@ -10,8 +10,6 @@ export async function GET(event) {
 		scopes: ['profile', 'email']
 	});
 
-	console.log('Here lesgo');
-
 	const response = new Response(null, {
 		status: 302,
 		headers: { Location: url.toString() }

@@ -113,7 +113,7 @@
 	@use '$lib/style/main' as *;
 
 	section {
-		background: $neutral-950;
+		background: $dark;
 		color: $white;
 		overflow-x: hidden;
 		padding-inline: 0;

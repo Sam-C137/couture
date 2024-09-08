@@ -14,12 +14,14 @@
 	export let error: string | undefined = undefined;
 	export let maxLength: number | undefined = undefined;
 	export let minLength: number | undefined = undefined;
+	export let disabled: boolean = false;
 
 	$: inputProps = {
 		id,
 		name,
 		value,
 		required,
+		disabled,
 		placeholder: floatLabel ? '' : placeholder,
 		class: `${className} ${type === 'number' ? 'number-input' : ''} ${error ? 'error' : ''}`,
 		'aria-invalid': String(Boolean(error)) as 'true' | 'false'

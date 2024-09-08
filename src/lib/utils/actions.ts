@@ -1,3 +1,5 @@
+import { isHtmlElement } from '$lib/utils/helpers';
+
 export function clickOutside(node: HTMLElement, onClickOutside: () => void) {
 	function handleClick(event: Event) {
 		if (node && !node.contains(event.target as Node) && !event.defaultPrevented) {
@@ -16,10 +18,12 @@ export function clickOutside(node: HTMLElement, onClickOutside: () => void) {
 
 export function parseNumber(node: HTMLInputElement) {
 	const handleInput = (event: Event) => {
-		const value = (event.target as HTMLInputElement)?.value;
+		if (!isHtmlElement<HTMLInputElement>(event.target)) return;
+
+		const { value } = event.target;
 		if (value === '' || isNaN(Number(value))) {
 			event.preventDefault();
-			(event.target as HTMLInputElement).value = node.value;
+			event.target.value = node.value;
 		} else {
 			node.value = value;
 		}
@@ -36,10 +40,12 @@ export function parseNumber(node: HTMLInputElement) {
 
 export function maxInputLength(node: HTMLInputElement, maxLength: number) {
 	const handleInput = (event: Event) => {
-		const value = (event.target as HTMLInputElement)?.value;
+		if (!isHtmlElement<HTMLInputElement>(event.target)) return;
+
+		const { value } = event.target;
 		if (value.length > maxLength) {
 			event.preventDefault();
-			(event.target as HTMLInputElement).value = value.slice(0, maxLength);
+			event.target.value = value.slice(0, maxLength);
 		}
 	};
 
@@ -54,7 +60,9 @@ export function maxInputLength(node: HTMLInputElement, maxLength: number) {
 
 export function minInputLength(node: HTMLInputElement, minLength: number) {
 	const handleInput = (event: Event) => {
-		const value = (event.target as HTMLInputElement)?.value;
+		if (!isHtmlElement<HTMLInputElement>(event.target)) return;
+
+		const { value } = event.target;
 		if (value.length < minLength) {
 			event.preventDefault();
 			(event.target as HTMLInputElement).value = value.slice(0, minLength);
