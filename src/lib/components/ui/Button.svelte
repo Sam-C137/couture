@@ -11,9 +11,19 @@
 	export let disabled: boolean = false;
 	export let loading: boolean = false;
 	export let role: string = 'button';
+	export let href: string | undefined = undefined;
+	export let className: string = '';
 </script>
 
-<button data-variant={variant} {type} {disabled} class:loading-button={loading} {role}>
+<svelte:element
+	this={href ? 'a' : 'button'}
+	data-variant={variant}
+	{type}
+	{disabled}
+	class:loading-button={loading}
+	{role}
+	class={className}
+>
 	{#if loading}
 		<div class="load-wrapper">
 			<slot />
@@ -28,7 +38,7 @@
 	{:else}
 		<slot />
 	{/if}
-</button>
+</svelte:element>
 
 <style lang="scss">
 	@use '$lib/style/main' as *;
@@ -46,7 +56,8 @@
 		gap: 1rem;
 	}
 
-	button {
+	button,
+	a {
 		@extend %reset;
 		padding: $padding;
 		font-family: $font-family;

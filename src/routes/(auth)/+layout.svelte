@@ -118,6 +118,9 @@
 		@extend %text-subtext;
 		color: $blue-600;
 		margin-top: -0.35rem;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	:global(form > .separator) {

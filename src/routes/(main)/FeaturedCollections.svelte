@@ -156,25 +156,7 @@
 
 					a {
 						@extend %text-subtext;
-						position: relative;
-						&::before {
-							content: '';
-							position: absolute;
-							width: 100%;
-							height: 2px;
-							bottom: -0.25rem;
-							left: 0;
-							visibility: hidden;
-							transform: scaleX(0);
-							transition: all 0.3s ease-in-out 0s;
-						}
-						&:hover {
-							&::before {
-								visibility: visible;
-								transform: scaleX(1);
-								background-color: $neutral-950;
-							}
-						}
+						@include animate-underline();
 					}
 				}
 			}
