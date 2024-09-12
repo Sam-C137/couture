@@ -42,7 +42,7 @@
 		type="text"
 		floatLabel
 		required
-		label="Your Name"
+		label="Your Username"
 		bind:value={$form.username}
 		error={$errors.username?.at(0)}
 	/>

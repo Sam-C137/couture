@@ -1,7 +1,8 @@
 <script lang="ts">
 	import VideoPlayerCard from '$lib/components/VideoPlayerCard.svelte';
 	import { onMount } from 'svelte';
-	import { isHtmlElement, screenSize } from '$lib/utils/helpers';
+	import { isHtmlElement } from '$lib/utils/helpers';
+	import { screenSize } from '$lib/stores/screen.store';
 
 	let reviews = [
 		{
@@ -58,7 +59,7 @@
 	let track: HTMLDivElement | undefined;
 
 	onMount(() => {
-		track?.scrollBy(-100, 0);
+		// track?.scrollBy(-100, 0);
 	});
 
 	function scrollBack() {
@@ -67,7 +68,7 @@
 		const itemWidth = track.firstChild.nextSibling.offsetWidth;
 
 		track?.scrollBy({
-			left: -itemWidth * (screenSize() === 'sm' ? 1 : 2),
+			left: -itemWidth * ($screenSize === 'sm' ? 1 : 2),
 			behavior: 'smooth'
 		});
 	}
@@ -78,7 +79,7 @@
 		const itemWidth = track.firstChild.nextSibling.offsetWidth;
 
 		track?.scrollBy({
-			left: itemWidth * (screenSize() === 'sm' ? 1 : 2),
+			left: itemWidth * ($screenSize === 'sm' ? 1 : 2),
 			behavior: 'smooth'
 		});
 	}

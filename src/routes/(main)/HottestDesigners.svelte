@@ -7,7 +7,10 @@
 	import miguelSmall from '$lib/images/miguel-angel-small.png';
 	import sofia from '$lib/images/sofia-herera.png';
 	import sofiaSmall from '$lib/images/sofia-herera-small.png';
-	import OptimizedImage from '$lib/components/ui/OptimizedImage.svelte';
+	import {
+		DesignerPreview,
+		DesignerPreviewSkeleton
+	} from '$lib/components/designers/designer-preview';
 
 	let designers = [
 		{
@@ -35,6 +38,8 @@
 			small: sofiaSmall
 		}
 	];
+
+	let isLoading = true;
 </script>
 
 <section>
@@ -42,17 +47,24 @@
 	<p>Fashion is an art form, and behind every stunning piece lies a visionary mind</p>
 
 	<ul>
-		{#each designers as designer (designer.name)}
-			<li>
-				<OptimizedImage
-					src={designer.image}
-					fallback={designer.small}
-					alt={designer.name}
-				/>
-				<p>{designer.name}</p>
-				<b>{designer.topic}</b>
-			</li>
-		{/each}
+		{#if isLoading}
+			{#each [1, 2, 3, 4] as _}
+				<li>
+					<DesignerPreviewSkeleton />
+				</li>
+			{/each}
+		{:else}
+			{#each designers as designer (designer.name)}
+				<li class="loaded">
+					<DesignerPreview
+						name={designer.name}
+						largeImage={designer.image}
+						smallImage={designer.small}
+						description={designer.topic}
+					/>
+				</li>
+			{/each}
+		{/if}
 	</ul>
 </section>
 
@@ -70,14 +82,6 @@
 			@extend %text-body;
 		}
 
-		:global(img),
-		:global(.blur-load) {
-			aspect-ratio: 245 / 275;
-			cursor: pointer;
-			width: 245px;
-			height: 275px;
-		}
-
 		ul {
 			margin-top: 2.5rem;
 			@extend %flex-row;
@@ -87,7 +91,7 @@
 			width: fit-content;
 			margin-inline: auto;
 
-			li {
+			li.loaded {
 				transition: 0.3s cubic-bezier(0, 0.11, 0.66, 0.8);
 				filter: grayscale(100%);
 				user-select: none;
@@ -95,20 +99,6 @@
 				&:hover {
 					filter: grayscale(0%);
 					transform: scale(1.1);
-				}
-
-				p,
-				b {
-					font-family: $font-body;
-					@extend %text-subtext;
-					margin-top: 0.5rem;
-					display: block;
-				}
-
-				p {
-					font-weight: 500;
-					color: $neutral-950;
-					font-size: 1.125rem;
 				}
 			}
 		}

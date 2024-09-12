@@ -17,7 +17,7 @@
 	<div class="flex-col">
 		<a href="/article/id?filter=fashion">The Best Swimsuits for your summer</a>
 		<div class="dona-info">
-			<Avatar src={donatella} alt={'Donatella Versace'} />
+			<Avatar src={donatella} size={56} alt={'Donatella Versace'} />
 			<div class="dona-info-text">
 				<p>Donatella Versace</p>
 				<p>Founder & Owner of Versace</p>
@@ -90,7 +90,6 @@
 				@extend %flex-row;
 				align-items: center;
 				gap: 0.85rem;
-				--avatar-size: 56px;
 				.dona-info-text {
 					@extend %flex-column;
 					p {

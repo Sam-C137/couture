@@ -59,6 +59,7 @@ export const actions: Actions = {
 				data: {
 					id: userId,
 					username,
+					displayName: username,
 					email,
 					passwordHash
 				}

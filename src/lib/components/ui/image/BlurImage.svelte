@@ -19,11 +19,17 @@
 	}
 </script>
 
-<div class:loaded class="blur-load" style:background-image={!loaded ? `url(${fallback})` : null}>
+<div
+	class:loaded
+	class="blur-image-wrapper"
+	style:background-image={!loaded ? `url(${fallback})` : null}
+>
 	<img {src} {alt} bind:this={img} loading="lazy" on:load={() => handleLoad()} />
 </div>
 
 <style lang="scss">
+	@use '$lib/style/main' as *;
+
 	img {
 		width: 100%;
 		display: block;
@@ -31,7 +37,7 @@
 		object-fit: cover;
 	}
 
-	.blur-load {
+	.blur-image-wrapper {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -46,6 +52,7 @@
 			img {
 				opacity: 1;
 			}
+
 			&::before {
 				content: none;
 			}
@@ -55,21 +62,7 @@
 			content: '';
 			position: absolute;
 			inset: 0;
-			animation: pulse 2.5s infinite;
-		}
-	}
-
-	@keyframes pulse {
-		0% {
-			background-color: rgba(255, 255, 255, 0);
-		}
-
-		50% {
-			background-color: rgba(255, 255, 255, 0.1);
-		}
-
-		100% {
-			background-color: rgba(255, 255, 255, 0);
+			@extend .animate-pulse;
 		}
 	}
 </style>

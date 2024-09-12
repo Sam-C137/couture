@@ -1,29 +1,23 @@
 <script lang="ts">
 	import avatar from '$lib/images/Avatar.png';
+	import { SkeletonImage } from '$lib/components/ui/image';
 
 	export let src: string | undefined = undefined;
 	export let alt: string = '';
+	export let size: number = 24;
 </script>
 
-<button on:click>
-	<img src={src || avatar} {alt} />
-</button>
+<SkeletonImage width={size} height={size} src={src || avatar} {alt} />
 
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	button {
-		$size: var(--avatar-size, 2rem);
-
-		@extend %reset;
-		width: $size;
-		height: $size;
+	:root {
+		--skeleton-br: 50vw;
 	}
 
-	img {
-		width: 100%;
+	:global(.skeleton-image-wrapper > img) {
 		height: 100%;
-		object-fit: cover;
 		border-radius: 50vw;
 	}
 </style>

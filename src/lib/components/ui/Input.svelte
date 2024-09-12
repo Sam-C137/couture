@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { maxInputLength, minInputLength, parseNumber } from '$lib/utils/actions';
-	import { onMount } from 'svelte';
 
 	export let id: string;
 	export let name: string;
@@ -8,13 +7,17 @@
 	export let value: string = '';
 	export let floatLabel: boolean = false;
 	export let placeholder: string = '';
-	export let className: string = '';
+	let className: string = '';
+	export { className as class };
 	export let required: boolean = false;
 	export let type: 'text' | 'number' | 'tel' | 'email' | 'password' = 'text';
 	export let error: string | undefined = undefined;
 	export let maxLength: number | undefined = undefined;
 	export let minLength: number | undefined = undefined;
 	export let disabled: boolean = false;
+	export let spellcheck: boolean = false;
+	export let autocomplete: HTMLInputElement['autocomplete'] = 'off';
+	export let enterkeyhint: 'enter' | 'done' | 'go' | 'next' | 'search' | 'send' = 'done';
 
 	$: inputProps = {
 		id,
@@ -22,6 +25,9 @@
 		value,
 		required,
 		disabled,
+		spellcheck,
+		enterkeyhint,
+		autocomplete,
 		placeholder: floatLabel ? '' : placeholder,
 		class: `${className} ${type === 'number' ? 'number-input' : ''} ${error ? 'error' : ''}`,
 		'aria-invalid': String(Boolean(error)) as 'true' | 'false'
@@ -38,15 +44,6 @@
 	}
 
 	$: isFilled = value.length > 0;
-
-	let self: HTMLInputElement | undefined;
-
-	// workaround for no dynamic type binding
-	onMount(() => {
-		if (self) {
-			self.type = type;
-		}
-	});
 </script>
 
 <div class="input-wrapper" class:float-label={floatLabel} class:has-error={error}>
@@ -56,12 +53,13 @@
 	<div class="input-field">
 		<slot name="icon-left" />
 		<input
+			dir="auto"
 			on:input
 			on:focus
 			on:blur
 			on:keyup
 			on:keydown
-			bind:this={self}
+			{...{ type }}
 			{...inputProps}
 			class:filled={isFilled}
 			bind:value
@@ -144,6 +142,7 @@
 		outline: none;
 		color: $color;
 		background: inherit;
+		font-family: inherit;
 
 		&:focus {
 			border: 2px solid $active-color;

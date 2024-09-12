@@ -62,6 +62,7 @@ export async function GET({ cookies, url }) {
 			data: {
 				id: userId,
 				username,
+				displayName: username,
 				googleId: googleUser.id,
 				email: googleUser.email
 			}

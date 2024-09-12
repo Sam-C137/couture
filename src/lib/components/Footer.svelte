@@ -121,12 +121,23 @@
 	}
 
 	div.flex {
-		@extend %flex-row;
+		@extend %flex-column;
 		justify-content: space-between;
+		gap: 2rem;
 		align-items: center;
 		padding-block: 3rem;
 		& > * {
 			flex: 1;
+		}
+		@include md {
+			flex-direction: row;
+			gap: 0;
+		}
+		& > *:last-child {
+			display: none;
+			@include lg {
+				display: block;
+			}
 		}
 	}
 
@@ -157,17 +168,25 @@
 	}
 
 	form {
-		@extend %flex-row;
+		@extend %flex-column;
+		gap: 2rem;
 		align-items: center;
 		width: 100%;
-		gap: 30rem;
 		background: $yellow-500;
 		padding: 2.25rem 2.5rem;
 		margin-bottom: 4rem;
 		color: $dark;
 		& > * {
-			flex: 1;
+			width: 100%;
 		}
+		@include lg {
+			gap: 15vw;
+			flex-direction: row;
+			& > * {
+				flex: 1;
+			}
+		}
+
 		h5 {
 			font-size: 1.5rem;
 			margin-bottom: 0.5rem;

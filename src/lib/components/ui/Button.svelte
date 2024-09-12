@@ -12,12 +12,16 @@
 	export let loading: boolean = false;
 	export let role: string = 'button';
 	export let href: string | undefined = undefined;
-	export let className: string = '';
+	export let formaction: string | undefined = undefined;
+	let className: string = '';
+	export { className as class };
 </script>
 
 <svelte:element
 	this={href ? 'a' : 'button'}
 	data-variant={variant}
+	aria-disabled={disabled}
+	{formaction}
 	{type}
 	{disabled}
 	class:loading-button={loading}

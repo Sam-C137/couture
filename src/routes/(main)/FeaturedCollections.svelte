@@ -5,7 +5,7 @@
 	import timelessClassicsSmall from '$lib/images/timeless-classics-small.png';
 	import eveningGlamour from '$lib/images/evening-glamour.png';
 	import eveningGlamourSmall from '$lib/images/evening-glamour-small.png';
-	import OptimizedImage from '$lib/components/ui/OptimizedImage.svelte';
+	import { BlurImage } from '$lib/components/ui/image';
 </script>
 
 <section>
@@ -27,11 +27,7 @@
 				</p>
 				<a href="/">View Collection</a>
 			</div>
-			<OptimizedImage
-				src={summerElegance}
-				fallback={summerEleganceSmall}
-				alt="summer elegance"
-			/>
+			<BlurImage src={summerElegance} fallback={summerEleganceSmall} alt="summer elegance" />
 		</div>
 		<hr />
 		<div class="collection">
@@ -45,7 +41,7 @@
 				</p>
 				<a href="/">View Collection</a>
 			</div>
-			<OptimizedImage
+			<BlurImage
 				src={timelessClassics}
 				fallback={timelessClassicsSmall}
 				alt="timeless classics"
@@ -62,11 +58,7 @@
 				</p>
 				<a href="/">View Collection</a>
 			</div>
-			<OptimizedImage
-				src={eveningGlamour}
-				fallback={eveningGlamourSmall}
-				alt="evening glamour"
-			/>
+			<BlurImage src={eveningGlamour} fallback={eveningGlamourSmall} alt="evening glamour" />
 		</div>
 	</div>
 </section>
@@ -110,13 +102,19 @@
 					object-fit: cover;
 					aspect-ratio: 826/633;
 					grid-row: 1 / 10;
-					grid-column: 9 / 13;
+					grid-column: 4 / 13;
+					@include lg {
+						grid-column: 9 / 13;
+					}
 				}
 
 				&:not(:first-of-type, :last-of-type) {
 					:global(img),
 					:global(.blur-load) {
-						grid-column: 1 / 5;
+						grid-column: 1 / 10;
+						@include lg {
+							grid-column: 1 / 5;
+						}
 					}
 
 					.text-content {

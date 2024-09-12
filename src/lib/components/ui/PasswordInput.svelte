@@ -7,7 +7,8 @@
 	export let value: string = '';
 	export let floatLabel: boolean = false;
 	export let placeholder: string = '';
-	export let className: string = '';
+	let className: string = '';
+	export { className as class };
 	export let required: boolean = false;
 	export let error: string | undefined = undefined;
 	export let maxLength: number | undefined = undefined;
@@ -23,7 +24,7 @@
 		required,
 		floatLabel,
 		placeholder,
-		className,
+		class: `${className}`,
 		error,
 		maxLength,
 		minLength

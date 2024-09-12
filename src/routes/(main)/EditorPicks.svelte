@@ -5,39 +5,42 @@
 	import four from '$lib/images/caroussel/4.png';
 	import five from '$lib/images/caroussel/5.png';
 	import { onMount } from 'svelte';
+	import { screenSize } from '$lib/stores/screen.store';
 
 	let radioList: (HTMLInputElement | null)[] = new Array(5).fill(null);
 	const imagesList = [one, two, three, four, five];
 
-	function handlePrev(){
+	function handlePrev() {
 		const activeIdx = radioList.findIndex((r) => r?.checked);
-		if(activeIdx >= 0) {
+		if (activeIdx >= 0) {
 			radioList[activeIdx]!.checked = false;
 			radioList[(activeIdx - 1 + radioList.length) % radioList.length]!.checked = true;
 		}
 		resetTimer();
 	}
 
-	function handleNext(){
+	function handleNext() {
 		const activeIdx = radioList.findIndex((r) => r?.checked);
-		if(activeIdx >= 0) {
+		if (activeIdx >= 0) {
 			radioList[activeIdx]!.checked = false;
 			radioList[(activeIdx + 1) % radioList.length]!.checked = true;
 		}
 		resetTimer();
 	}
 
-	let intervalId: ReturnType<typeof setInterval>
+	let intervalId: ReturnType<typeof setInterval>;
 
 	function resetTimer() {
 		clearInterval(intervalId);
-		intervalId = setInterval(handleNext, 5000)
+		intervalId = setInterval(handleNext, 5000);
 	}
 
 	onMount(() => {
 		resetTimer();
-		return () => clearInterval(intervalId)
-	})
+		return () => clearInterval(intervalId);
+	});
+
+	$: iconSize = $screenSize !== 'xs' ? 32 : 24;
 </script>
 
 <section>
@@ -48,31 +51,39 @@
 	</p>
 
 	<div class="carousel">
-
 		{#each imagesList as _, index}
-			<input type="radio" name="slider"
-				   id={"s" + (index + 1)} checked={index === 0} bind:this={radioList[index]}
+			<input
+				type="radio"
+				name="slider"
+				id={'s' + (index + 1)}
+				checked={index === 0}
+				bind:this={radioList[index]}
 			/>
 		{/each}
 
 		<div class="cards" style="position: relative">
 			<iconify-icon
-					icon="prime:arrow-left" width="32" height="32" on:click={handlePrev}
+				icon="prime:arrow-left"
+				width={iconSize}
+				height={iconSize}
+				on:click={handlePrev}
 			></iconify-icon>
 
-
 			{#each imagesList as image, index}
-				<label for={"s" + (index + 1)} id={"slide" + (index + 1)}>
+				<label for={'s' + (index + 1)} id={'slide' + (index + 1)}>
 					<div class="card">
 						<div class="image">
-							<img src={image} alt={"slide" + (index + 1)} />
+							<img src={image} alt={'slide' + (index + 1)} />
 						</div>
 					</div>
 				</label>
 			{/each}
 
 			<iconify-icon
-					icon="prime:arrow-right" width="32" height="32" on:click={handleNext}
+				icon="prime:arrow-right"
+				width={iconSize}
+				height={iconSize}
+				on:click={handleNext}
 			></iconify-icon>
 		</div>
 	</div>
@@ -81,13 +92,33 @@
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
+	@mixin carrousel-container {
+		height: calc(12rem - 1rem);
+		@include lg {
+			height: calc(25rem - 1rem);
+		}
+		@include xl {
+			height: calc(30rem - 1rem); //emulates slight spacing below
+		}
+	}
+
+	@mixin carrousel-image {
+		width: 12rem;
+		@include lg {
+			width: 25rem;
+		}
+		@include xl {
+			width: 30rem;
+		}
+	}
+
 	section {
 		background: $yellow-500;
 		text-align: left;
 
 		h2,
 		p {
-		  max-width: 70ch;
+			max-width: 70ch;
 		}
 
 		h2 {
@@ -105,16 +136,13 @@
 		.carousel {
 			position: relative;
 			width: 100%;
-			height: calc(25rem - 1rem);
 			@extend %flex-center;
 			transform-style: preserve-3d;
 			flex-direction: column;
 			margin-top: 4rem;
-			@include xl {
-				height: calc(30rem - 1rem); //emulates slight spacing below
-			}
+			@include carrousel-container;
 
-			iconify-icon{
+			iconify-icon {
 				background: $dark;
 				cursor: pointer;
 				border-radius: 50%;
@@ -128,10 +156,10 @@
 				}
 			}
 
-			[icon="prime:arrow-left"] {
+			[icon='prime:arrow-left'] {
 				left: 0;
 			}
-			[icon="prime:arrow-right"] {
+			[icon='prime:arrow-right'] {
 				right: 0;
 			}
 		}
@@ -166,12 +194,9 @@
 				justify-content: space-between;
 				width: fit-content;
 				img {
-					width: 25rem;
 					object-fit: cover;
 					transition: all 07s;
-					@include xl {
-						width: 30rem;
-					}
+					@include carrousel-image;
 				}
 			}
 		}
