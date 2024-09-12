@@ -16,15 +16,15 @@
 	</div>
 	<div class="flex-col">
 		<a href="/article/id?filter=fashion">The Best Swimsuits for your summer</a>
-		<div class="dona-info">
-			<Avatar src={donatella} size={56} alt={'Donatella Versace'} />
-			<div class="dona-info-text">
+		<div class="author-info">
+			<Avatar src={donatella} size={56} alt="Donatella Versace" />
+			<div class="author-info-text">
 				<p>Donatella Versace</p>
 				<p>Founder & Owner of Versace</p>
 				<p>1st July, 2024</p>
 			</div>
 		</div>
-		<div class="donna-text-details">
+		<div class="author-info-details">
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, animi cum
 				dolor enim exercitationem facere fugit in inventore iste itaque laborum laudantium
@@ -86,11 +86,11 @@
 					text-decoration: underline;
 				}
 			}
-			.dona-info {
+			.author-info {
 				@extend %flex-row;
 				align-items: center;
 				gap: 0.85rem;
-				.dona-info-text {
+				.author-info-text {
 					@extend %flex-column;
 					p {
 						color: $neutral-600;
@@ -108,7 +108,7 @@
 					}
 				}
 			}
-			.donna-text-details {
+			.author-info-details {
 				&:not(:has(.more-content)) {
 					mask-image: linear-gradient(to top, transparent, $white);
 				}

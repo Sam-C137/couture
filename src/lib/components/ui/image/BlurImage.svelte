@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import type { Props } from '.';
 
-	export let src: string;
-	export let fallback: string;
-	export let alt: string;
+	type $$Props = Props;
+
+	export let fallback: $$Props['fallback'];
+	export let el: $$Props['el'] = undefined;
 
 	let loaded = false;
-	let img: HTMLImageElement | undefined;
 
 	onMount(() => {
-		if (img?.complete) {
+		if (el?.complete) {
 			loaded = true;
 		}
 	});
@@ -24,7 +25,8 @@
 	class="blur-image-wrapper"
 	style:background-image={!loaded ? `url(${fallback})` : null}
 >
-	<img {src} {alt} bind:this={img} loading="lazy" on:load={() => handleLoad()} />
+	<!-- svelte-ignore a11y-missing-attribute -->
+	<img {...$$restProps} bind:this={el} loading="lazy" on:load={() => handleLoad()} />
 </div>
 
 <style lang="scss">

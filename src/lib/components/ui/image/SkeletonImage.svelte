@@ -2,11 +2,12 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import Skeleton from '$lib/components/ui/Skeleton.svelte';
+	import type { Props } from '.';
 
-	export let src: string;
-	export let alt: string;
-	export let width: number = 24;
-	export let height: number = 24;
+	type $$Props = Props;
+
+	export let width: $$Props['width'] = 24;
+	export let height: $$Props['height'] = 24;
 
 	let loaded = false;
 	let img: HTMLImageElement | undefined;
@@ -24,11 +25,11 @@
 
 {#if loaded}
 	<div class="skeleton-image-wrapper" transition:fade>
+		<!-- svelte-ignore a11y-missing-attribute -->
 		<img
-			{src}
+			{...$$restProps}
 			{width}
 			{height}
-			{alt}
 			bind:this={img}
 			loading="lazy"
 			on:load={() => handleLoad()}
@@ -36,11 +37,11 @@
 	</div>
 {:else}
 	<Skeleton class="skeleton-image-wrapper">
+		<!-- svelte-ignore a11y-missing-attribute -->
 		<img
-			{src}
+			{...$$restProps}
 			{width}
 			{height}
-			{alt}
 			bind:this={img}
 			loading="lazy"
 			on:load={() => handleLoad()}

@@ -37,6 +37,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@dicebear/collection": "^9.2.1",
+		"@dicebear/core": "^9.2.1",
 		"@fontsource/yatra-one": "^5.0.14",
 		"@iconify/svelte": "^4.0.2",
 		"@lucia-auth/adapter-prisma": "^4.0.1",

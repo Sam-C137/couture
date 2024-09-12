@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/Button.svelte';
+	import { Button } from '$lib/components/ui/button';
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms';
 	import { setCountdownMessage } from '$lib/utils/countdown';

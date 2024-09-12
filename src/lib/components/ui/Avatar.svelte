@@ -1,10 +1,13 @@
 <script lang="ts">
-	import avatar from '$lib/images/Avatar.png';
 	import { SkeletonImage } from '$lib/components/ui/image';
+	import { createAvatar } from '@dicebear/core';
+	import { notionists } from '@dicebear/collection';
 
 	export let src: string | undefined = undefined;
 	export let alt: string = '';
 	export let size: number = 24;
+
+	const avatar = createAvatar(notionists, { size, seed: alt }).toDataUri();
 </script>
 
 <SkeletonImage width={size} height={size} src={src || avatar} {alt} />

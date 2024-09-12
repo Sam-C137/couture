@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import { type Actions, fail, redirect } from '@sveltejs/kit';
 import RateLimiter from '$lib/server/rate-limiter';
-import { message, setError, superValidate } from 'sveltekit-superforms';
+import { message, superValidate } from 'sveltekit-superforms';
 import { zod } from 'sveltekit-superforms/adapters';
 import { requestPasswordResetSchema } from '$lib/utils/validations';
 import prisma from '$lib/server/prisma';

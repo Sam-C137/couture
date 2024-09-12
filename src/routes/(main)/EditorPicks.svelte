@@ -62,11 +62,14 @@
 		{/each}
 
 		<div class="cards" style="position: relative">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<iconify-icon
 				icon="prime:arrow-left"
 				width={iconSize}
 				height={iconSize}
 				on:click={handlePrev}
+				role="button"
+				tabindex="0"
 			></iconify-icon>
 
 			{#each imagesList as image, index}
@@ -79,11 +82,14 @@
 				</label>
 			{/each}
 
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<iconify-icon
 				icon="prime:arrow-right"
 				width={iconSize}
 				height={iconSize}
 				on:click={handleNext}
+				role="button"
+				tabindex="0"
 			></iconify-icon>
 		</div>
 	</div>

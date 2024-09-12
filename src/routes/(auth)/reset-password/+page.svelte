@@ -5,8 +5,8 @@
 	import { superForm } from 'sveltekit-superforms';
 	import { zod } from 'sveltekit-superforms/adapters';
 	import { passwordResetSchema } from '$lib/utils/validations';
-	import PasswordInput from '$lib/components/ui/PasswordInput.svelte';
-	import Button from '$lib/components/ui/Button.svelte';
+	import { PasswordInput } from '$lib/components/ui/input';
+	import { Button } from '$lib/components/ui/button';
 	import { setCountdownMessage } from '$lib/utils/countdown';
 
 	export let data: PageData;

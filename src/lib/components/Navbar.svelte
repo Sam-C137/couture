@@ -32,7 +32,7 @@
 		{#if user}
 			<Dropdown>
 				<span slot="trigger">
-					<Avatar src={user.image} alt={user.displayName} />
+					<Avatar src={user.image} alt={user.displayName} size={36} />
 					<iconify-icon
 						icon="ic:baseline-keyboard-arrow-down"
 						width="30"
@@ -162,7 +162,6 @@
 
 			[slot='trigger'] {
 				@extend %flex-row;
-				gap: 0.25rem;
 				align-items: center;
 			}
 

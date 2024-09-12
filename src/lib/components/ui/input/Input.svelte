@@ -1,35 +1,28 @@
 <script lang="ts">
 	import { maxInputLength, minInputLength, parseNumber } from '$lib/utils/actions';
+	import type { Props } from '.';
 
-	export let id: string;
-	export let name: string;
-	export let label: string = '';
-	export let value: string = '';
-	export let floatLabel: boolean = false;
-	export let placeholder: string = '';
-	let className: string = '';
-	export { className as class };
-	export let required: boolean = false;
-	export let type: 'text' | 'number' | 'tel' | 'email' | 'password' = 'text';
-	export let error: string | undefined = undefined;
-	export let maxLength: number | undefined = undefined;
-	export let minLength: number | undefined = undefined;
-	export let disabled: boolean = false;
-	export let spellcheck: boolean = false;
-	export let autocomplete: HTMLInputElement['autocomplete'] = 'off';
-	export let enterkeyhint: 'enter' | 'done' | 'go' | 'next' | 'search' | 'send' = 'done';
+	type $$Props = Props;
+
+	export let id: $$Props['id'];
+	export let label: $$Props['label'] = '';
+	export let value: $$Props['value'] = '';
+	export let floatLabel: $$Props['floatLabel'] = false;
+	export let placeholder: $$Props['placeholder'] = '';
+	export let type: $$Props['type'] = 'text';
+	export let error: $$Props['error'] = undefined;
+	export let maxLength: $$Props['maxLength'] = undefined;
+	export let minLength: $$Props['minLength'] = undefined;
+	export let disabled: $$Props['disabled'] = false;
+	export let spellcheck: $$Props['spellcheck'] = false;
 
 	$: inputProps = {
 		id,
-		name,
 		value,
-		required,
 		disabled,
 		spellcheck,
-		enterkeyhint,
-		autocomplete,
 		placeholder: floatLabel ? '' : placeholder,
-		class: `${className} ${type === 'number' ? 'number-input' : ''} ${error ? 'error' : ''}`,
+		class: `${$$restProps?.class} ${type === 'number' ? 'number-input' : ''} ${error ? 'error' : ''}`,
 		'aria-invalid': String(Boolean(error)) as 'true' | 'false'
 	};
 
@@ -43,7 +36,7 @@
 		return maxLength ? maxInputLength(node, maxLength) : {};
 	}
 
-	$: isFilled = value.length > 0;
+	$: isFilled = value && value.length > 0;
 </script>
 
 <div class="input-wrapper" class:float-label={floatLabel} class:has-error={error}>
@@ -60,6 +53,7 @@
 			on:keyup
 			on:keydown
 			{...{ type }}
+			{...$$restProps}
 			{...inputProps}
 			class:filled={isFilled}
 			bind:value

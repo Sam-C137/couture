@@ -59,7 +59,7 @@
 	let track: HTMLDivElement | undefined;
 
 	onMount(() => {
-		// track?.scrollBy(-100, 0);
+		track?.scrollBy(-100, 0);
 	});
 
 	function scrollBack() {

@@ -1,32 +1,41 @@
 <script lang="ts">
-	export let variant:
-		| 'default'
-		| 'destructive'
-		| 'outline'
-		| 'secondary'
-		| 'ghost'
-		| 'link'
-		| 'inverted' = 'default';
-	export let type: HTMLButtonElement['type'] = 'button';
-	export let disabled: boolean = false;
-	export let loading: boolean = false;
-	export let role: string = 'button';
-	export let href: string | undefined = undefined;
-	export let formaction: string | undefined = undefined;
-	let className: string = '';
-	export { className as class };
+	import type { Props } from '.';
+
+	type $$Props = Props;
+
+	export let variant: $$Props['variant'] = 'default';
+	export let type: $$Props['type'] = 'button';
+	export let disabled: $$Props['disabled'] = false;
+	export let loading: $$Props['loading'] = false;
+	export let role: $$Props['role'] = 'button';
+	export let href: $$Props['href'] = undefined;
+
+	const attrs = {
+		'aria-disabled': disabled,
+		'data-variant': variant
+	};
 </script>
 
 <svelte:element
 	this={href ? 'a' : 'button'}
-	data-variant={variant}
-	aria-disabled={disabled}
-	{formaction}
+	{...attrs}
 	{type}
 	{disabled}
-	class:loading-button={loading}
 	{role}
-	class={className}
+	{href}
+	on:click
+	on:change
+	on:keydown
+	on:keyup
+	on:mouseenter
+	on:mouseleave
+	on:mousedown
+	on:pointerdown
+	on:mouseup
+	on:pointerup
+	tabindex="0"
+	class:loading-button={loading}
+	{...$$restProps}
 >
 	{#if loading}
 		<div class="load-wrapper">

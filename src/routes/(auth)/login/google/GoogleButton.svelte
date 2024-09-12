@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/components/ui/Button.svelte';
+	import { Button } from '$lib/components/ui/button';
 </script>
 
 <Button variant="outline">

@@ -77,3 +77,28 @@ export function minInputLength(node: HTMLInputElement, minLength: number) {
 		}
 	};
 }
+
+export function debounce(
+	node: HTMLInputElement,
+	params: { delay: number; callback: (value: string) => void }
+) {
+	let timer: ReturnType<typeof setTimeout>;
+
+	const handleInput = (event: Event) => {
+		clearTimeout(timer);
+		timer = setTimeout(() => {
+			params.callback((event.target as HTMLInputElement).value);
+		}, params.delay);
+	};
+
+	node.addEventListener('input', handleInput);
+
+	return {
+		destroy() {
+			node.removeEventListener('input', handleInput);
+		},
+		update(newParams: { delay: number; callback: (value: string) => void }) {
+			params = newParams;
+		}
+	};
+}

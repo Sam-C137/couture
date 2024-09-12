@@ -1,12 +1,11 @@
 <script lang="ts">
-	import Input from '$lib/components/ui/Input.svelte';
-	import Button from '$lib/components/ui/Button.svelte';
+	import { Input, PasswordInput, DebouncedInput } from '$lib/components/ui/input';
+	import { Button } from '$lib/components/ui/button';
 	import GoogleButton from './google/GoogleButton.svelte';
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms';
 	import { zod } from 'sveltekit-superforms/adapters';
 	import { loginSchema } from '$lib/utils/validations';
-	import PasswordInput from '$lib/components/ui/PasswordInput.svelte';
 
 	export let data: PageData;
 

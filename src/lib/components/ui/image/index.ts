@@ -1,4 +1,4 @@
-import BlurImage from './BlurImage.svelte';
-import SkeletonImage from './SkeletonImage.svelte';
+export { default as BlurImage } from './BlurImage.svelte';
+export { default as SkeletonImage } from './SkeletonImage.svelte';
 
-export { SkeletonImage, BlurImage };
+export type { ImageProps as Props } from './types';

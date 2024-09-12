@@ -4,9 +4,9 @@
 	import { superForm } from 'sveltekit-superforms';
 	import { zod } from 'sveltekit-superforms/adapters';
 	import { registerSchema } from '$lib/utils/validations';
-	import Input from '$lib/components/ui/Input.svelte';
-	import PasswordInput from '$lib/components/ui/PasswordInput.svelte';
-	import Button from '$lib/components/ui/Button.svelte';
+	import { Input } from '$lib/components/ui/input';
+	import { PasswordInput } from '$lib/components/ui/input';
+	import { Button } from '$lib/components/ui/button';
 	import GoogleButton from '../login/google/GoogleButton.svelte';
 
 	export let data: PageData;
