@@ -39,4 +39,7 @@
 	});
 </script>
 
-<Input {...$$restProps} {id} {name} bind:value on:input={handleInput} />
+<Input {...$$restProps} {id} {name} bind:value on:input={handleInput}>
+	<slot name="icon-left" slot="icon-left" />
+	<slot name="icon-right" slot="icon-right" />
+</Input>

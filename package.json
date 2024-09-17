@@ -11,7 +11,9 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"db:push": "pnpm dlx prisma db push",
-		"db:studio": "pnpm dlx prisma studio"
+		"db:studio": "pnpm dlx prisma studio",
+		"db:migrate": "./scripts/generate_migration.sh \"update schema\"",
+		"db:migrate:apply": "./scripts/apply_migration.sh"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -41,8 +43,10 @@
 		"@dicebear/core": "^9.2.1",
 		"@fontsource/yatra-one": "^5.0.14",
 		"@iconify/svelte": "^4.0.2",
+		"@libsql/client": "^0.12.0",
 		"@lucia-auth/adapter-prisma": "^4.0.1",
-		"@prisma/client": "^5.18.0",
+		"@prisma/adapter-libsql": "^5.19.1",
+		"@prisma/client": "^5.19.1",
 		"@types/nodemailer": "^6.4.15",
 		"@uploadthing/svelte": "^6.6.3",
 		"arctic": "^1.9.2",

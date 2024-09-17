@@ -22,7 +22,7 @@
 		disabled,
 		spellcheck,
 		placeholder: floatLabel ? '' : placeholder,
-		class: `${$$restProps?.class} ${type === 'number' ? 'number-input' : ''} ${error ? 'error' : ''}`,
+		class: `${$$restProps.class ? $$restProps.class : ''} ${type === 'number' ? 'number-input' : ''} ${error ? 'error' : ''}`,
 		'aria-invalid': String(Boolean(error)) as 'true' | 'false'
 	};
 
@@ -83,6 +83,7 @@
 	$font-size: var(--input-font-size, 1rem);
 	$label-font-size: var(--input-label-font-size, 0.85rem);
 	$error-color: var(--input-error-color, $red-500);
+	$width: var(--input-width, 100%);
 
 	.input-wrapper {
 		font-family: $font-family;
@@ -128,7 +129,7 @@
 	}
 
 	input {
-		width: 100%;
+		width: $width;
 		border-radius: 0.5rem;
 		font-size: 1rem;
 		padding: $padding-block $padding-inline;

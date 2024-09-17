@@ -5,40 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/button/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/image/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/input/DebouncedInput.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/input/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/input/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/toggle/ToggleGroup.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/toggle/ToggleGroupItem.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/ui/toggle/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/types/helpers.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/apply_migration.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/generate_migration.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/articles/+page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/(main)/articles/SearchField.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Button.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/button/Button.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Input.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/input/Input.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/PasswordInput.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/input/PasswordInput.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Skeleton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Skeleton.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/image/BlurImage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/image/BlurImage.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/image/SkeletonImage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/image/SkeletonImage.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/image/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/image/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/forgot-password/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/login/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/login/google/GoogleButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/login/google/GoogleButton.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/register/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/register/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/request-reset-success/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/request-reset-success/+page.server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/request-reset-success/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/request-reset-success/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/reset-password/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(main)/EditorPicks.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/EditorPicks.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(main)/TodayArticles.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/TodayArticles.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(main)/VideoGallery.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/VideoGallery.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/input/DebouncedInput.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/input/DebouncedInput.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/input/Input.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/input/Input.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/server/prisma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/server/prisma.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/(main)/articles/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/articles/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +58,10 @@
         <option value="SearchBar" />
         <option value="ToggleGroup" />
         <option value="ToggleGroupItem" />
-        <option value="TypeScript File" />
         <option value="DebouncedInput" />
+        <option value="SearchField" />
+        <option value="Card" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -117,8 +97,13 @@
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\prettier",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -130,11 +115,11 @@
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\static\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\prisma\migrations" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\components\ui\input" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\components\ui\button" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\components\ui\image" />
       <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\lib\utils" />
-      <recent name="C:\Users\SamAckah\Desktop\Program Files\couture\src\routes\(auth)\login\google" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -168,7 +153,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.426" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
       </set>
     </attachedChunks>
   </component>
@@ -184,7 +169,8 @@
       <workItem from="1724684960291" duration="230000" />
       <workItem from="1724685304202" duration="29422000" />
       <workItem from="1724774035197" duration="3242000" />
-      <workItem from="1724789574890" duration="206204000" />
+      <workItem from="1724789574890" duration="217514000" />
+      <workItem from="1726497511102" duration="8908000" />
     </task>
     <servers />
   </component>
