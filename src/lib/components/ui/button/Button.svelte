@@ -36,6 +36,7 @@
 	tabindex="0"
 	class:loading-button={loading}
 	{...$$restProps}
+	data-component="Button"
 >
 	{#if loading}
 		<div class="load-wrapper">
@@ -69,8 +70,7 @@
 		gap: 1rem;
 	}
 
-	button,
-	a {
+	[data-component='Button'] {
 		@extend %reset;
 		padding: $padding;
 		font-family: $font-family;

@@ -9,6 +9,7 @@
 	use:clickOutside={() => (isOpen ? (isOpen = false) : null)}
 	role="menu"
 	aria-orientation="vertical"
+	data-component="Dropdown"
 >
 	<button on:click={() => (isOpen = !isOpen)}>
 		<slot name="trigger" />
@@ -30,7 +31,7 @@
 		align-items: center;
 	}
 
-	.wrapper {
+	[data-component='Dropdown'] {
 		position: relative;
 
 		div {

@@ -9,7 +9,7 @@
 	$: path = $page.url.pathname;
 </script>
 
-<nav>
+<nav data-component="Navbar">
 	<a class="logo" href="/"> couture </a>
 	<ul>
 		<li>
@@ -56,7 +56,7 @@
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	nav {
+	[data-component='Navbar'] {
 		--_gap: 1rem;
 
 		color: $neutral-950;

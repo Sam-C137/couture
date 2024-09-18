@@ -33,7 +33,7 @@
 	});
 </script>
 
-<article>
+<article data-component="VideoPlayerCard">
 	<video
 		muted
 		playsinline
@@ -61,7 +61,7 @@
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	article {
+	[data-component='VideoPlayerCard'] {
 		padding: 0.85rem 0.65rem;
 		display: grid;
 		grid-template-rows: 2fr 1.5fr;

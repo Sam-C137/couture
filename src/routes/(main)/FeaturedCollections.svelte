@@ -95,8 +95,8 @@
 				grid-template-columns: repeat(12, 1fr);
 				grid-template-rows: repeat(9, 1fr);
 
-				:global(.blur-image-wrapper),
-				:global(.blur-image-wrapper > img) {
+				:global([data-component='BlurImage']),
+				:global([data-component='BlurImage'] > img) {
 					height: 100%;
 					width: 100%;
 					object-fit: cover;
@@ -109,8 +109,8 @@
 				}
 
 				&:not(:first-of-type, :last-of-type) {
-					:global(.blur-image-wrapper),
-					:global(.blur-image-wrapper > img) {
+					:global([data-component='BlurImage']),
+					:global([data-component='BlurImage'] > img) {
 						grid-column: 1 / 10;
 						@include lg {
 							grid-column: 1 / 5;

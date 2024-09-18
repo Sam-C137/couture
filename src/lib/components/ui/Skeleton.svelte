@@ -7,14 +7,14 @@
 	export { className as class };
 </script>
 
-<div class={className + ' skeleton'} {...$$restProps}>
+<div class={className} data-component="skeleton" {...$$restProps}>
 	<slot />
 </div>
 
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	div {
+	:where([data-component='skeleton']) {
 		border-radius: calc(1rem - 2px);
 		@extend .animate-pulse;
 		background: $shell-2;

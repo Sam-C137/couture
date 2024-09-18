@@ -14,6 +14,9 @@
 		debounceTime={300}
 		on:debouncedValueChange={handleSearch}
 		class="dbs"
+		--input-padding-inline="2.25rem"
+		--input-width="min(50rem,
+		90vw)"
 	>
 		<iconify-icon
 			icon="ic:baseline-search"
@@ -27,11 +30,6 @@
 
 <style lang="scss">
 	@use '$lib/style/main' as *;
-
-	:root {
-		--input-padding-inline: 2.25rem;
-		--input-width: min(50rem, 90vw);
-	}
 
 	div {
 		display: grid;

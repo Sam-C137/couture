@@ -50,7 +50,7 @@
 	let divElement: HTMLDivElement | undefined;
 </script>
 
-<div bind:this={divElement} class:disabled class:readonly>
+<div bind:this={divElement} class:disabled class:readonly data-component="RatingStars">
 	{#each stars as _, index}
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

@@ -5,7 +5,7 @@
 	const { user } = $page.data as { user?: User };
 </script>
 
-<footer>
+<footer data-component="Footer">
 	{#if !user}
 		<form action="/api/newsletter" method="post">
 			<div>
@@ -83,7 +83,7 @@
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	footer {
+	[data-component='Footer'] {
 		@extend %text-subtext;
 		color: $neutral-100;
 		font-weight: 400;

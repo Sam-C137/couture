@@ -22,8 +22,8 @@
 
 <div
 	class:loaded
-	class="blur-image-wrapper"
 	style:background-image={!loaded ? `url(${fallback})` : null}
+	data-component="BlurImage"
 >
 	<!-- svelte-ignore a11y-missing-attribute -->
 	<img {...$$restProps} bind:this={el} loading="lazy" on:load={() => handleLoad()} />
@@ -32,20 +32,17 @@
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	img {
-		width: 100%;
-		display: block;
-		object-position: center;
-		object-fit: cover;
-	}
-
-	.blur-image-wrapper {
+	[data-component='BlurImage'] {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		position: relative;
 
 		img {
+			width: 100%;
+			display: block;
+			object-position: center;
+			object-fit: cover;
 			opacity: 0;
 			transition: opacity 200ms ease-in-out;
 		}

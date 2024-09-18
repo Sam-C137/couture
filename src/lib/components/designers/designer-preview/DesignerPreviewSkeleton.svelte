@@ -18,7 +18,7 @@
 		width: 100%;
 		gap: 0.65rem;
 
-		:global(.skeleton) {
+		:global([data-component='skeleton']) {
 			width: 100%;
 			border-radius: 0;
 			height: 0.5rem;

@@ -30,10 +30,9 @@
 		font-size: 1.125rem;
 	}
 
-	:global(.blur-image-wrapper),
-	:global(.blur-image-wrapper > img) {
+	:global([data-component='BlurImage']),
+	:global([data-component='BlurImage'] > img) {
 		aspect-ratio: 245 / 275;
-		cursor: pointer;
 		width: 245px;
 		height: 275px;
 	}

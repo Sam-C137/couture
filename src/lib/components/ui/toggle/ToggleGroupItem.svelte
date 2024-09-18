@@ -14,6 +14,7 @@
 	{value}
 	aria-label={label}
 	tabindex="0"
+	data-component="ToggleGroupItem"
 >
 	<slot />
 </button>
@@ -26,7 +27,7 @@
 	$active-color: var(--togle-active-color, $white);
 	$active-bg: var(--togle-color, $neutral-950);
 
-	button {
+	[data-component='ToggleGroupItem'] {
 		@extend %reset;
 		padding: 0.5rem 1rem;
 		background: $bg;

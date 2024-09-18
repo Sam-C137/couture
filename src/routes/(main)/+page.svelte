@@ -11,7 +11,7 @@
 	<meta name="description" content="Home of the exotic" />
 </svelte:head>
 
-<main>
+<main data-page="home">
 	<EditorPicks />
 
 	<TodayArticles />
@@ -26,7 +26,7 @@
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	main {
+	[data-page='home'] {
 		:global(section) {
 			min-height: fit-content;
 			padding-inline: 5vw;

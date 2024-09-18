@@ -5,19 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107173e2-f565-463c-bb69-ced16c8f8ec5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/apply_migration.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/generate_migration.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(main)/articles/+page.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/(main)/articles/SearchField.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5d7cc65b-1312-4f5e-a005-bede3468037b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5d7cc65b-1312-4f5e-a005-bede3468037b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/input/DebouncedInput.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/input/DebouncedInput.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Footer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Footer.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/Navbar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/VideoPlayerCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/VideoPlayerCard.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/designers/designer-preview/DesignerPreview.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/designers/designer-preview/DesignerPreview.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/designers/designer-preview/DesignerPreviewSkeleton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/designers/designer-preview/DesignerPreviewSkeleton.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Avatar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Dropdown.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Dropdown.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/RatingStars.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/RatingStars.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/Skeleton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/Skeleton.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/button/Button.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/button/Button.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/image/BlurImage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/image/BlurImage.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/image/SkeletonImage.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/image/SkeletonImage.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/image/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/image/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/ui/input/Input.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/input/Input.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/server/prisma.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/server/prisma.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/(main)/articles/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/articles/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/toggle/ToggleGroup.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/toggle/ToggleGroup.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/ui/toggle/ToggleGroupItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ui/toggle/ToggleGroupItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(auth)/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(auth)/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/FeaturedCollections.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/(main)/articles/SearchField.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/(main)/articles/SearchField.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +108,8 @@
     "npm.db:push.executor": "Run",
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "ts.external.directory.path": "C:\\Users\\SamAckah\\Desktop\\Program Files\\couture\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -170,7 +182,8 @@
       <workItem from="1724685304202" duration="29422000" />
       <workItem from="1724774035197" duration="3242000" />
       <workItem from="1724789574890" duration="217514000" />
-      <workItem from="1726497511102" duration="8908000" />
+      <workItem from="1726497511102" duration="12673000" />
+      <workItem from="1726588699551" duration="9871000" />
     </task>
     <servers />
   </component>

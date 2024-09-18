@@ -59,7 +59,7 @@
 	}
 </script>
 
-<div bind:this={self} role="group" dir="ltr">
+<div data-component="ToggleGroup" bind:this={self} role="group" dir="ltr">
 	<slot />
 </div>
 
@@ -69,7 +69,7 @@
 	$gap: var(--toggle-group-gap, 1rem);
 	$width: var(--toggle-group-width, 100%);
 
-	div {
+	[data-component='ToggleGroup'] {
 		@extend %flex-row;
 		align-items: center;
 		justify-content: center;

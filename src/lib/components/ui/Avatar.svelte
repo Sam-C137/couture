@@ -10,17 +10,19 @@
 	const avatar = createAvatar(notionists, { size, seed: alt }).toDataUri();
 </script>
 
-<SkeletonImage width={size} height={size} src={src || avatar} {alt} />
+<SkeletonImage
+	--skeleton-br="50vw"
+	width={size}
+	height={size}
+	src={src || avatar}
+	{alt}
+	fallback={undefined}
+/>
 
 <style lang="scss">
 	@use '$lib/style/main' as *;
 
-	:root {
-		--skeleton-br: 50vw;
-	}
-
-	:global(.skeleton-image-wrapper > img) {
-		height: 100%;
+	:global([data-component='skeleton']) {
 		border-radius: 50vw;
 	}
 </style>

@@ -24,7 +24,7 @@
 </script>
 
 {#if loaded}
-	<div class="skeleton-image-wrapper" transition:fade>
+	<div data-component="SkeletonImage" transition:fade>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<img
 			{...$$restProps}
@@ -36,7 +36,7 @@
 		/>
 	</div>
 {:else}
-	<Skeleton class="skeleton-image-wrapper">
+	<Skeleton class="SkeletonImage">
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<img
 			{...$$restProps}
@@ -63,7 +63,7 @@
 		transition: opacity 200ms ease-in-out;
 	}
 
-	:global(.skeleton.skeleton-image-wrapper) {
+	:global([data-component='skeleton'].SkeletonImage) {
 		width: fit-content;
 		height: fit-content;
 		border-radius: $border-radius;

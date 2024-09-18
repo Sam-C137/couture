@@ -39,7 +39,7 @@
 	$: isFilled = value && value.length > 0;
 </script>
 
-<div class="input-wrapper" class:float-label={floatLabel} class:has-error={error}>
+<div data-component="Input" class:float-label={floatLabel} class:has-error={error}>
 	{#if !floatLabel}
 		<label for={id}>{label}</label>
 	{/if}
@@ -85,108 +85,108 @@
 	$error-color: var(--input-error-color, $red-500);
 	$width: var(--input-width, 100%);
 
-	.input-wrapper {
+	[data-component='Input'] {
 		font-family: $font-family;
-	}
 
-	.input-field {
-		position: relative;
-		background: inherit;
-	}
-
-	.float-label {
-		.input-field label {
-			position: absolute;
-			top: 50%;
-			left: $padding-inline;
-			transform: translateY(-50%);
-			font-size: $font-size;
-			transition: all 0.3s;
-			pointer-events: none;
+		.input-field {
+			position: relative;
+			background: inherit;
 		}
 
-		input:focus ~ label,
-		input.filled ~ label {
-			top: 0;
-			font-size: $label-font-size;
-			line-height: 0.75rem;
-			background: $white;
-		}
+		&.float-label {
+			.input-field label {
+				position: absolute;
+				top: 50%;
+				left: $padding-inline;
+				transform: translateY(-50%);
+				font-size: $font-size;
+				transition: all 0.3s;
+				pointer-events: none;
+			}
 
-		input:focus ~ label {
-			color: $active-color;
-		}
+			input:focus ~ label,
+			input.filled ~ label {
+				top: 0;
+				font-size: $label-font-size;
+				line-height: 0.75rem;
+				background: $white;
+			}
 
-		input.filled ~ label {
-			color: $color;
-		}
-	}
+			input:focus ~ label {
+				color: $active-color;
+			}
 
-	label {
-		color: $neutral-600;
-		margin-bottom: 0.25rem;
-		display: block;
-	}
-
-	input {
-		width: $width;
-		border-radius: 0.5rem;
-		font-size: 1rem;
-		padding: $padding-block $padding-inline;
-		border: $border;
-		outline: none;
-		color: $color;
-		background: inherit;
-		font-family: inherit;
-
-		&:focus {
-			border: 2px solid $active-color;
-		}
-
-		&.filled {
-			border: 2px solid $color;
-		}
-
-		&.number-input {
-			-webkit-appearance: textfield;
-			&::-webkit-inner-spin-button,
-			&::-webkit-outer-spin-button {
-				-webkit-appearance: none;
-				margin: 0;
+			input.filled ~ label {
+				color: $color;
 			}
 		}
 
-		&.error {
-			border: 2px solid $error-color;
-		}
-	}
-
-	.has-error {
 		label {
-			color: $error-color !important;
+			color: $neutral-600;
+			margin-bottom: 0.25rem;
+			display: block;
 		}
 
 		input {
-			border: 2px solid $error-color;
+			width: $width;
+			border-radius: 0.5rem;
+			font-size: 1rem;
+			padding: $padding-block $padding-inline;
+			border: $border;
+			outline: none;
+			color: $color;
+			background: inherit;
+			font-family: inherit;
 
-			&:focus,
+			&:focus {
+				border: 2px solid $active-color;
+			}
+
 			&.filled {
+				border: 2px solid $color;
+			}
+
+			&.number-input {
+				-webkit-appearance: textfield;
+				&::-webkit-inner-spin-button,
+				&::-webkit-outer-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+			}
+
+			&.error {
 				border: 2px solid $error-color;
 			}
 		}
 
-		.float-label {
-			input:focus ~ label,
-			input.filled ~ label {
-				color: $error-color;
+		&.has-error {
+			label {
+				color: $error-color !important;
+			}
+
+			input {
+				border: 2px solid $error-color;
+
+				&:focus,
+				&.filled {
+					border: 2px solid $error-color;
+				}
+			}
+
+			.float-label {
+				input:focus ~ label,
+				input.filled ~ label {
+					color: $error-color;
+				}
 			}
 		}
-	}
 
-	small {
-		color: $error-color;
-		font-size: $label-font-size;
-		margin-top: 0.25rem;
-		display: block;
+		small {
+			color: $error-color;
+			font-size: $label-font-size;
+			margin-top: 0.25rem;
+			display: block;
+		}
 	}
 </style>
